@@ -1,3 +1,8 @@
+.section{
+    height: auto;
+    padding: 20px;
+}
+
 #first{
     display: flex;
     flex-flow: row wrap;
@@ -126,7 +131,6 @@
 #second{
     display: flex;
     flex-flow: row wrap;
-    height: 110vh;
 }
 
 #second>div{
@@ -182,7 +186,6 @@
 #third{
     display: flex;
     flex-flow: row wrap;
-    height: 100vh;
 }
 
 #third>div:first-child{
@@ -217,7 +220,6 @@
 }
 
 #fourth{
-    height: 120vh;
     display: flex;
     flex-flow: row wrap;
     background-color: #363C44;
@@ -338,7 +340,6 @@ th{
     display: flex;
     flex-flow: row wrap;
     margin-top: 5vh;
-    padding: 10vh;
     background-color: #00B29E;
 }
 

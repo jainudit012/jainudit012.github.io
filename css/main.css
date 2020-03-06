@@ -1,7 +1,6 @@
 .site__header {
     background-color: #09070a;
     padding: 1rem 14rem;
-    height: 20vh;
 }
 
 .site__nav {
@@ -57,14 +56,14 @@
 }
 
 .site__main {
-    display: flex;
-    position: relative;
-    height: 80.5vh;
+    display: grid;
+    grid-template-columns: 12fr 35px 1fr;
 }
 
 .site__section__wrapper{
-    width: 100%;
     display: flex;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
 }
 
 .site__sections {
@@ -134,11 +133,12 @@
 }
 
 .section__paginator {
-    position: absolute;
-    top: 25%;
-    right: 5%;
     display: flex;
     flex-direction: column;
+    grid-column: 2/3;
+    grid-row: 1/-1;
+    z-index: 1;
+    transform: translateY(25%);
 }
 
 .paginator__counter {
@@ -406,30 +406,31 @@ For displaying Pill on HOVER on item
 
 .site__info-rp__panels__wrapper {
     width: 56%;
-    display: flex;
-    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 6rem 6rem 1fr;
+    grid-template-rows: 85% 5% 10%;
 }
 
 .site__info-rp__panels__front {
-    width: 64%;
     opacity: 0.95;
     border-radius: 2rem 0 0 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.85)), url("../assets/phone.jpg");
     background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.85)), -webkit-image-set(url("../assets/phone.jpg") 1x, url("../assets/phone@2x.jpg") 2x, url("../assets/phone@3x.jpg") 3x);
     background-repeat: no-repeat;
     background-size: cover;
+    grid-row: 1/-1;
+    grid-column: 1/3;
 }
 
 .site__info-rp__panels__second {
-    width: 64%;
+    width: 33vw;
     height: 100%;
     opacity: 1;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.95)), url("../assets/watch.jpg");
     background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.95)), -webkit-image-set(url("../assets/watch.jpg") 1x, url("../assets/watch@2x.jpg") 2x, url("../assets/watch@3x.jpg") 3x);
     background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 62%;
+    grid-row: 1/-1;
+    grid-column: 3/-1;
 }
 
 .site__info-rp__panels__header {
@@ -501,12 +502,14 @@ For displaying Pill on HOVER on item
 }
 
 .site__info-rp__panels-paginator-wrapper {
-    position: absolute;
-    top: 85%;
-    left: 57.5%;
     display: flex;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    z-index: 1;
+    margin-left: 3px;
+    height: 5rem;
 }
-/**/
+
 .site__info-rp__panels-paginator-box {
     background-color: #283FD9;
     padding: 1.2rem 1.2rem 0.6rem 1.2rem;
@@ -523,8 +526,6 @@ For displaying Pill on HOVER on item
 
 .site__info-rp__panels-paginator-box-right {
     border-radius: 0 5px 5px 0;
-    margin-left: -0.8rem;
-    z-index: 10;
 }
 
 .disabled-paginator {
@@ -595,18 +596,20 @@ For displaying Pill on HOVER on item
 
 .ss__flipper {
     width: 62%;
-    position: relative;
     color: #ffffff;
     background-color:  rgba(21, 21, 21, 0.45);
     border-radius: 0 0 20px 0;
-    display: flex;
+    display: grid;
+    grid-template-rows: 85% 5% 10%;
+    grid-template-columns: 10fr 6rem 6rem 1fr;
 }
 
 .ss__flipper__front {
     background-color: #151515;
-    width: 83.5%;
     padding: 0 0 14.8rem 22.6rem;
     border-radius: 0 0 20px 0;
+    grid-column: 1/3;
+    grid-row: 1/-1;
 }
 
 .ss__panels__header {
@@ -668,10 +671,11 @@ For displaying Pill on HOVER on item
 }
 
 .ss__panels-paginator-wrapper {
-    position: absolute;
-    top: 82%;
-    right: 11.7%;
     display: flex;
+    margin-left: 3px;
+    height: 5rem;
+    grid-column: 2/4;
+    grid-row: 2/3;
 }
 
 .ss__panels-paginator-box {
@@ -690,8 +694,6 @@ For displaying Pill on HOVER on item
 
 .ss__panels-paginator-box-right {
     border-radius: 0 5px 5px 0;
-    margin-left: -0.8rem;
-    z-index: 10;
 }
 
 .ss__disabled-paginator {
@@ -1010,17 +1012,21 @@ For showing pill on card on HOVER
 
 .mot__cards__container {
     width: 55%;
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 6rem 6rem 1fr;
+    grid-template-rows: 38% 7% 56%;
 }
 
 .mot__cards__wrapper {
-    display: flex;
-    width: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .mot__cards {
-    width: 50%;
-    display: flex;
+    display: grid;
+    grid-template-rows: 45% 55%;
     flex-direction: column;
     border-bottom: 5px solid hsl(232, 70%, 50%, 0.2);
 }
@@ -1046,7 +1052,6 @@ For showing pill on card on HOVER
     width: 100%;
     border-radius: 5% 5% 0 0;
     display: flex;
-    height: 45%;
 }
 
 .mot__cards__image {
@@ -1100,10 +1105,10 @@ For showing pill on card on HOVER
 }
 
 .mot__cards__paginator--wrapper {
-    position: absolute;
-    top: 38%;
-    left: 44%;
     display: flex;
+    grid-row: 2/3;
+    grid-column: 2/4;
+    z-index: 1;
 }
 
 .mot__cards__paginator--box {

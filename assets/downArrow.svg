@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="43" viewBox="0 0 46 43">
+  <title>Go Down</title>
+  <g id="Right_Arrow" data-name="Right Arrow" transform="translate(-1.179 -5.024)">
+    <rect id="Rectangle_32" data-name="Rectangle 32" width="46" height="43" rx="10" transform="translate(1.179 5.024)" fill="#283fd9"/>
+    <path id="Thin_Arrow" data-name="Thin Arrow" d="M15.281,6.517l-5.087,5.107A.816.816,0,1,1,9.05,10.46l3.7-3.7H.817a.817.817,0,1,1,0-1.634H12.748L9.03,1.41a.814.814,0,0,1,0-1.164.814.814,0,0,1,1.164,0l5.087,5.107A.814.814,0,0,1,15.281,6.517Z" transform="translate(30.114 19.072) rotate(90)" fill="#fff"/>
+  </g>
+</svg>

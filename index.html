@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="./scripts/mastScroller.js" async></script>
     <title>OPSCALE</title>
 </head>
 <body>
@@ -15,9 +16,9 @@
         <nav class="site__nav">
             <a href="#" class="nav__logo__link"><img src="./assets/logo.png" srcset="./assets/logo.png 1x, ./assets/logo@2x.png 2x" alt="Opscale Logo" class="nav__logo"></a>
             <ul class="nav__list__wrapper">
-                <li class="nav__list__item"><a href="#" class="nav__list__link">What&nbsp;We&nbsp;Do</a></li>
-                <li class="nav__list__item nav__list__item__expand"><a href="#" class="nav__list__link">Industries</a>
-                    <ul class="nav__list__item__group">
+                <li class="nav__list__item" id="wwd__link"><a href="#" class="nav__list__link">What&nbsp;We&nbsp;Do</a></li>
+                <li class="nav__list__item nav__list__item__expand" id="ind__link"><a href="#" class="nav__list__link">Industries</a>
+                    <ul class="nav__list__item__group" id="ind__group">
                         <li class="nav__list__item__group__item"><a href="#" class="nav__list__link">Healthcare</a></li>
                         <li class="nav__list__item__group__item"><a href="#" class="nav__list__link">Finance</a></li>
                         <li class="nav__list__item__group__item"><a href="#" class="nav__list__link">Media&nbsp;&amp;&nbsp;Entertainment</a></li>
@@ -25,64 +26,66 @@
                         <li class="nav__list__item__group__item"><a href="#" class="nav__list__link">E-Commerce</a></li>
                     </ul>
                 </li>
-                <li class="nav__list__item"><a href="#" class="nav__list__link">Insights</a></li>
-                <li class="nav__list__item nav__list__item__expand"><a href="#" class="nav__list__link">About&nbsp;Us</a>
-                    <ul class="nav__list__item__group">
+                <li class="nav__list__item"><a href="#" class="nav__list__link" id="ins__link">Insights</a></li>
+                <li class="nav__list__item nav__list__item__expand" id="abt__link"><a href="#" class="nav__list__link">About&nbsp;Us</a>
+                    <ul class="nav__list__item__group" id="abt__group">
                         <li class="nav__list__item__group__item"><a href="#" class="nav__list__link">Why&nbsp;Choose&nbsp;Us</a></li>
                         <li class="nav__list__item__group__item"><a href="#" class="nav__list__link">Meet&nbsp;Our&nbsp;Team</a></li>
                         <li class="nav__list__item__group__item"><a href="#" class="nav__list__link">Careers</a></li>
                     </ul>
                 </li>
-                <li class="nav__list__item"><a href="#" class="nav__list__link">Contact&nbsp;Us</a></li>
+                <li class="nav__list__item" id="ctu__link"><a href="#" class="nav__list__link">Contact&nbsp;Us</a></li>
             </ul>
         </nav>
         <hr class="nav__hr">
     </header>
     <main class="site__main">
         <div class="site__section__wrapper">
-            <section class="site__sections site__section__first" style="background-size: cover;">
+            <section id="mast-1" class="site__sections site__section__first" style="background-size: cover;">
                 <h1 class="sections__heading">We Deliver Expert Market Leaders</h1>
                 <p class="sections__text">Founder-bootstrapped to multi-million dollaer investments, we have helped startups of all shapes and sizes to become market leaders.</p>
                 <h5 class="sections__sub-heading">We Build an MVP in 4 Weeks</h5>
                 <div class="sections__button-group">
-                    <a class="sections__button-group__link" href="#">
+                    <a class="sections__button-group__link" href="#wwd__section">
                         <img src="./assets/downArrow.svg" alt="More" class="sections__arrow-down">
                         <span class="sections__learn">Learn More</span>
                     </a>
                 </div>
             </section>
-            <section class="site__sections site__section__second hidden" style="background-size: cover;">
+            <section id="mast-2" class="site__sections site__section__second hideabs" style="background-size: cover;">
                 <h1 class="sections__heading">We Deliver Exceptional Engineering Solutions</h1>
                 <p class="sections__text">Founder-bootstrapped to multi-million dollaer investments, we have helped startups of all shapes and sizes to become market leaders.</p>
                 <h5 class="sections__sub-heading">We Build an MVP in 4 Weeks</h5>
                 <div class="sections__button-group">
-                    <a class="sections__button-group__link" href="#">
+                    <a class="sections__button-group__link" href="#wwd__section">
                         <img src="./assets/downArrow.svg" alt="More" class="sections__arrow-down">
                         <span class="sections__learn">Learn More</span>
                     </a>
                 </div>
             </section>
-            <section class="site__sections site__section__third hidden" style="background-size: cover;">
+            <section id="mast-3" class="site__sections site__section__third hideabs" style="background-size: cover;">
                 <h1 class="sections__heading">We Deliver Expertise in Innovation</h1>
                 <p class="sections__text">Founder-bootstrapped to multi-million dollaer investments, we have helped startups of all shapes and sizes to become market leaders.</p>
                 <h5 class="sections__sub-heading">We Build an MVP in 4 Weeks</h5>
                 <div class="sections__button-group">
-                    <a class="sections__button-group__link" href="#">
+                    <a class="sections__button-group__link" href="#wwd__section">
                         <img src="./assets/downArrow.svg" alt="More" class="sections__arrow-down">
                         <span class="sections__learn">Learn More</span>
                     </a>
                 </div>
             </section>
         </div>
-        <div class="section__paginator">
-            <div class="paginator__counter paginator__counter__start">01</div>
-            <div class="paginator__progress">
-                <div class="paginator__current-progress"></div>
+        <div class="section__paginator" id="section__paginator">
+            <div class="paginator__counter" id="start__count">01</div>
+            <div class="paginator__progress-wrapper" id="paginator__progress-wrapper">
+                <div class="paginator__current-progress paginator__progress" id="paginator__progress-start"></div>
+                <div class="paginator__progress" id="paginator__progress-mid"></div>
+                <div class="paginator__progress" id="paginator__progress-end"></div>
             </div>
-            <div class="paginator__counter paginator__counter__end">03</div>
+            <div class="paginator__counter paginator__greyed" id="end__count">03</div>
         </div>
     </main>
-    <section class="site__info-wwd">
+    <section class="site__info-wwd" id="wwd__section">
         <div class="site__info-wwd__heading-wrapper">
             <h1 class="site__info-wwd__heading">What We Do</h1>
             <p class="site__info-wwd__text">From lean startup techniques to scaling your developer operations and application performance for globally connected orld, our specialized teams lead the product design, development &amp; operations process for high growth companies</p>
@@ -663,10 +666,10 @@
         <p class="tod__text">Let's Talk</p>
         <form class="tod__form" id="tod__form">
             <div class="tod__input-group">
-                <input type="text" class="tod__input" name="name" id="name" placeholder="Name">
-                <input type="email" class="tod__input" name="email" id="email" placeholder="Email">
+                <input type="text" class="tod__input" name="name" id="name" placeholder="Name" aria-label="name">
+                <input type="email" class="tod__input" name="email" id="email" placeholder="Email" aria-label="email">
             </div>
-            <textarea class="tod__textarea" name="subject" id="subject" cols="30" rows="5" placeholder="Subject"></textarea>
+            <textarea class="tod__textarea" name="subject" id="subject" cols="30" rows="5" placeholder="Subject" aria-label="subject"></textarea>
             <button class="tod__form__btn" type="button" id="tod__btn">Submit</button>
         </form>
         <div class="tod__floating-icon">

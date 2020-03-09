@@ -5,6 +5,7 @@
 
 .site__nav {
     display: flex;
+    align-items: flex-end;
     padding-top: 8.2rem 
 }
 
@@ -21,16 +22,14 @@
 
 .nav__list__wrapper {
     display: flex;
-    margin-right: 2.8rem;
+    justify-content: space-between;
 }
 
 .nav__list__item {
     font-size: 2rem;
     font-weight: 600;
-}
-
-.nav__list__link {
     padding: 2rem;
+    position: relative;
 }
 
 .nav__list__link:link, .nav__list__link:visited {
@@ -38,16 +37,41 @@
     color: #ffffff;
 }
 
-.nav__list__link:hover, .nav__list__link:active {
-    background-image: linear-gradient(174deg, #09070a 3%, #0A134E 97%);
-}
-
-.nav__list__item:not(:last-child) {
-    margin-right: 2rem;
+.nav__list__item:hover {
+    z-index: 1;
+    padding: 1.7rem;
+    border: 3px solid rgba(40, 63, 217, 0.15);
 }
 
 .nav__list__item__group  {
     display: none;
+}
+
+.nav__list__item:hover  .nav__list__item__group {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    backdrop-filter: blur(30px);
+    border: solid 2px rgba(40, 63, 217, 0.15);
+    top: 100%;
+    left: -2%;
+    background-image: linear-gradient(174deg, #09070a 3%, #0A134E 97%);
+    border-radius: 0 0 15px 15px;
+}
+
+.nav__list__item__group__item {
+    padding: 2rem;
+    border: 1px solid rgba(40, 63, 217, 0.15);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.nav__list__item__group__item:last-child {
+    border-radius: 0 0 15px 15px;
+}
+
+.nav__list__item__group__item:hover {
+    background-color: #283fd9;
 }
 
 .nav__hr {
@@ -58,19 +82,23 @@
 .site__main {
     display: grid;
     grid-template-columns: 12fr 35px 1fr;
+    transform: translateY(-5px);
+    overflow: hidden;
 }
 
 .site__section__wrapper{
     display: flex;
     grid-column: 1/-1;
     grid-row: 1/-1;
+    position: relative;
+    background: linear-gradient(147deg, #09070a 39%, rgba(9, 7, 10, 0.25) 72%) black;
 }
 
 .site__sections {
     padding: 21.4rem 0 27.6rem 22.6rem;
     color: #ffffff;
     width: 100%;
-    transform: translateY(-5px);
+    transition: all 300ms ease-out;
 }
 
 .site__section__first {
@@ -146,11 +174,11 @@
     font-size: 1.8rem;
 }
 
-.paginator__counter__end {
+.paginator__greyed {
     opacity: 0.5;
 }
 
-.paginator__progress {
+.paginator__progress-wrapper {
     height: 35rem;
     border: 1px solid rgba(100%, 100%, 100%, 0.3);
     border-radius: 10px;
@@ -160,11 +188,16 @@
     margin: 2rem 0;
 }
 
-.paginator__current-progress {
-    height: 30%;
-    background-color: #ffffff;
-    opacity: 1;
+.paginator__progress {
+    height: 33.3%;
     border-radius: 10px 10px 0 0;
+    background-color: #ffffff;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.paginator__current-progress {
+    opacity: 1;
 }
 
 .site__info-wwd {
@@ -207,6 +240,7 @@
 
 .site__info-wwd__text-quotes {
     width: 13rem;
+    height: 100%;
     transform: translateY(-75%);
     margin: 1rem;
 }
@@ -562,6 +596,7 @@ For displaying Pill on HOVER on item
 }
 
 .hww__card__img {
+    align-self: center;
     background-color: #f4f4f4;
     width: 12.2rem;
     height: 12.2rem;
@@ -1278,8 +1313,12 @@ For showing pill on card on HOVER
     flex-direction: column;
 }
 
-.footer__site-sections__item {
+.footer__site-sections__item:first-child {
     margin-top: 2.5rem;
+}
+
+.footer__site-sections__item{
+    margin-bottom: 2.5rem;
 }
 
 .footer__site-sections__links {
@@ -1289,6 +1328,7 @@ For showing pill on card on HOVER
     line-height: 1.39;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.6);
+    transition: all 300ms ease-out;
 }
 
 .footer__site-sections__links:hover, .sections__links__highlighted {
@@ -1296,7 +1336,6 @@ For showing pill on card on HOVER
     font-weight: 900;
     color: rgba(255, 255, 255, 0.8);
 }
-
 .footer__site-sections__container-social {
     width: fit-content;
 }

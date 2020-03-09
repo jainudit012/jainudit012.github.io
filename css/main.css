@@ -1328,11 +1328,9 @@ For showing pill on card on HOVER
     line-height: 1.39;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.6);
-    transition: all 300ms ease-out;
 }
 
 .footer__site-sections__links:hover, .sections__links__highlighted {
-    font-size: 2rem;
     font-weight: 900;
     color: rgba(255, 255, 255, 0.8);
 }

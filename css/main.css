@@ -279,11 +279,10 @@
     background-color: #283fd9;
 }
 
-/* 
-For HOVER on card to trigger svg bg change
+/* For HOVER on card to trigger svg bg change */
 .site__info-wwd__card:hover .card__img__box {
     background-color: #283fd9;
-} */
+}
 
 .card__img {
     width: 3rem;
@@ -295,12 +294,10 @@ For HOVER on card to trigger svg bg change
     fill: #fff;
 }
 
-
-/* 
-For HOVER on card to trigger svg color change
+/* For HOVER on card to trigger svg color change */
 .site__info-wwd__card:hover .card__img {
     fill: #fff;
-} */
+}
 
 .card__heading {
     font-size: 2.5rem;
@@ -318,17 +315,17 @@ For HOVER on card to trigger svg color change
     margin: 1.22rem 0 2.58rem 0;
 }
 
-.card__pill-selected {
+.card__selected .card__pill {
     opacity: 1;
     background-color: #283fd9;
 }
 
-/* 
-For HOVER on card to trigger pill color change
+
+/* For HOVER on card to trigger pill color change */
 .site__info-wwd__card:hover .card__pill {
     opacity: 1;
     background-color: #283fd9;
-} */
+}
 
 .card__footer {
     opacity: 0.6;
@@ -1331,7 +1328,6 @@ For showing pill on card on HOVER
 }
 
 .footer__site-sections__links:hover, .sections__links__highlighted {
-    font-weight: 900;
     color: rgba(255, 255, 255, 0.8);
 }
 .footer__site-sections__container-social {

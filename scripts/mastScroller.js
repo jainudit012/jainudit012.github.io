@@ -1,5 +1,3 @@
-console.log('mastScroller.js LOADED\n', '*** REMOVE in PROD ***')
-
 function addClass(element, className){
     const arrOfClassNames = element.className.split(" ")
     if(arrOfClassNames.indexOf(className) === -1) element.className += ` ${className}`

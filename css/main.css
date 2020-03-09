@@ -98,7 +98,8 @@
     padding: 21.4rem 0 27.6rem 22.6rem;
     color: #ffffff;
     width: 100%;
-    transition: all 300ms ease-out;
+    transition: all 300ms ease-in;
+    transition-property: transform opacity;
 }
 
 .site__section__first {

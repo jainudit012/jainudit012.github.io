@@ -32,7 +32,9 @@ function filterBlogs(tag){
         })
     }
     removeClassFromMultiple(filteredBlogs, 'hidden')
+    addClassToMultiple(filteredBlogs, 'block')
     addClassToMultiple(hiddenBlogs, 'hidden')
+    removeClassFromMultiple(hiddenBlogs, 'block')
 
     if(filteredBlogs.length === 0) {
         removeClass(noBlogElement, 'hidden')

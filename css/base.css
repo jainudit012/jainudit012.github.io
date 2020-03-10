@@ -5,13 +5,8 @@
 html {
     font-size: 62.5%;   /* 1 rem is 10px */
     font-family: Poppins, sans-serif;
-    overflow-x: hidden;
     line-height: 1.52;
     scroll-behavior: smooth;
-}
-
-body {
-    overflow-x: hidden;
 }
 
 .hidden {

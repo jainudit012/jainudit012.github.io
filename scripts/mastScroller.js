@@ -1,12 +1,3 @@
-function addClass(element, className){
-    const arrOfClassNames = element.className.split(" ")
-    if(arrOfClassNames.indexOf(className) === -1) element.className += ` ${className}`
-}
-
-function removeClass(element, className){
-    element.className = element.className.replace(className, "")
-}
-
 const startNumber = document.getElementById('start__count')
 const endNumber = document.getElementById('end__count')
 
@@ -24,12 +15,10 @@ startPaginator.addEventListener('click', () => {
     addClass(endNumber, 'paginator__greyed')
 
     addClass(startPaginator, 'paginator__current-progress')
-    removeClass(midPaginator, 'paginator__current-progress')
-    removeClass(endPaginator, 'paginator__current-progress')
+    removeClassFromMultiple([midPaginator, endPaginator], 'paginator__current-progress')
 
     removeClass(mast1, 'hideabs')
-    addClass(mast2, 'hideabs')
-    addClass(mast3, 'hideabs')
+    addClassToMultiple([mast2, mast3], 'hideabs')
 })
 
 midPaginator.addEventListener('click', () => {
@@ -37,13 +26,11 @@ midPaginator.addEventListener('click', () => {
     removeClass(startNumber, 'paginator__greyed')
     addClass(endNumber, 'paginator__greyed')
 
-    removeClass(startPaginator, 'paginator__current-progress')
+    removeClassFromMultiple([startPaginator, endPaginator], 'paginator__current-progress')
     addClass(midPaginator, 'paginator__current-progress')
-    removeClass(endPaginator, 'paginator__current-progress')
 
-    addClass(mast1, 'hideabs')
+    addClassToMultiple([mast1, mast3], 'hideabs')
     removeClass(mast2, 'hideabs')
-    addClass(mast3, 'hideabs')
 })
 
 endPaginator.addEventListener('click', () => {
@@ -51,11 +38,9 @@ endPaginator.addEventListener('click', () => {
     removeClass(endNumber, 'paginator__greyed')
     addClass(startNumber, 'paginator__greyed')
 
-    removeClass(startPaginator, 'paginator__current-progress')
-    removeClass(midPaginator, 'paginator__current-progress')
+    removeClassFromMultiple([startPaginator, midPaginator], 'paginator__current-progress')
     addClass(endPaginator, 'paginator__current-progress')
     
-    addClass(mast1, 'hideabs')
-    addClass(mast2, 'hideabs')
+    addClassToMultiple([mast1, mast2], 'hideabs')
     removeClass(mast3, 'hideabs')
 })

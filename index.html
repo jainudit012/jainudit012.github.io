@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="./scripts/utility.js" async defer></script>
     <script src="./scripts/mastScroller.js" async defer></script>
     <script src="./scripts/wwdCardSelector.js" async defer></script>
+    <script src="./scripts/blogFilter.js" async defer></script>
     <title>OPSCALE</title>
 </head>
 <body>
@@ -96,7 +98,7 @@
         <img src="./assets/quotes.svg" alt='"' class="site__info-wwd__text-quotes">
             <p class="site__info-wwd__text-extra">We develop Progressive Web Applications (PWA) that load under 200 milliseconds over the internet</p>
         </div>
-        <div class="site__info-wwd__card__wrapper">
+        <div class="site__info-wwd__card__wrapper" id="wwd__card__box">
             <div id="wwd__card-1" class="card site__info-wwd__card card__selected">
                 <div class="card__img__box">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30.8 28" class="card__img">
@@ -326,38 +328,39 @@
         <h1 class="ii__heading">Industry Insights</h1>
         <nav class="ii__nav">
             <ul class="ii__nav__list">
-                <li class="ii__nav__list-item ii__nav__list-item--selected">
+                <li class="ii__nav__list-item ii__nav__list-item--selected" id="all_b">
                     <div class="ii__nav-item__heading">All Posts</div>
                     <div class="ii__nav-item__pill"></div>
                 </li>
-                <li class="ii__nav__list-item">
+                <li class="ii__nav__list-item" id="pm_b">
                     <div class="ii__nav-item__heading">Product&nbsp;Management</div>
                     <div class="ii__nav-item__pill"></div>
                 </li>
-                <li class="ii__nav__list-item">
+                <li class="ii__nav__list-item" id="dev_b">
                     <div class="ii__nav-item__heading">DevOps &amp; SRE</div>
                     <div class="ii__nav-item__pill"></div>
                 </li>
-                <li class="ii__nav__list-item">
+                <li class="ii__nav__list-item" id="per_b">
                     <div class="ii__nav-item__heading">Performance</div>
                     <div class="ii__nav-item__pill"></div>
                 </li>
-                <li class="ii__nav__list-item">
+                <li class="ii__nav__list-item" id="ux_b">
                     <div class="ii__nav-item__heading">UX</div>
                     <div class="ii__nav-item__pill"></div>
                 </li>
-                <li class="ii__nav__list-item">
+                <li class="ii__nav__list-item" id="app_b">
                     <div class="ii__nav-item__heading">Applications</div>
                     <div class="ii__nav-item__pill"></div>
                 </li>
-                <li class="ii__nav__list-item">
+                <li class="ii__nav__list-item" id="sta_b">
                     <div class="ii__nav-item__heading">Startup</div>
                     <div class="ii__nav-item__pill"></div>
                 </li>
             </ul>
         </nav>
-        <div class="ii__card__wrapper">
-            <div class="ii__card ii__card--selected">
+        <div class="ii__card__wrapper" id="ii__card__box">
+            <!-- pm -> product management; dev -> devops & sre; per -> performance; ux -> UX; app -> applications; sta -> startup -->
+            <div class="ii__card" id="ii__card-1" data-filterTag="pm">
                 <header class="ii__card__header">
                     <img src="./assets/laptop.jpg" srcset="./assets/laptop.jpg 1x, ./assets/laptop@2x.jpg 2x ,./assets/laptop@3x.jpg 3x" alt="Laptop" class="ii__card__header-image">
                 </header>
@@ -375,7 +378,7 @@
                     </div>
                 </footer>
             </div>
-            <div class="ii__card">
+            <div class="ii__card" id="ii__card-2" data-filterTag="dev">
                 <header class="ii__card__header">
                     <img src="./assets/code_screen.jpg" srcset="./assets/code_screen.jpg 1x, ./assets/code_screen@2x.jpg 2x, ./assets/code_screen@3x.jpg 3x" alt="code screen" class="ii__card__header-image">
                 </header>
@@ -393,7 +396,7 @@
                     </div>
                 </footer>
             </div>
-            <div class="ii__card">
+            <div class="ii__card" id="ii__card-3" data-filterTag="per">
                 <header class="ii__card__header">
                     <img src="./assets/phone_wh.jpg" srcset="./assets/phone_wh.jpg 1x, ./assets/phone_wh@2x.jpg 2x, ./assets/phone_wh@3x.jpg 3x" alt="phone" class="ii__card__header-image">
                 </header>
@@ -411,7 +414,7 @@
                     </div>
                 </footer>
             </div>
-            <div class="ii__card">
+            <div class="ii__card" id="ii__card-4" data-filterTag="sta">
                 <header class="ii__card__header">
                     <img src="./assets/work.jpg" srcset="./assets/work.jpg 1x, ./assets/work@2x.jpg 2x, ./assets/work@3x.jpg 3x" alt="work" class="ii__card__header-image">
                 </header>
@@ -429,7 +432,7 @@
                     </div>
                 </footer>
             </div>
-            <div class="ii__card">
+            <div class="ii__card" id="ii__card-5" data-filterTag="sta">
                 <header class="ii__card__header">
                     <img src="./assets/phone_ha.jpg" srcset="./assets/phone_ha.jpg 1x, ./assets/phone_ha@2x.jpg 2x, ./assets/phone_ha@3x.jpg 3x" alt="phone" class="ii__card__header-image">
                 </header>
@@ -448,6 +451,7 @@
                 </footer>
             </div>
         </div>
+        <p class="ii__card__no-blogs hidden" id="no__blogs">No Blogs!</p>
     </section>
     <section class="site__info-wcu">
         <h1 class="wcu__heading">Why&nbsp;Choose&nbsp;Us</h1>

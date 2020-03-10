@@ -21,3 +21,7 @@ html {
     left: 0;
     transform: translate(0, 25%);
 }
+
+.block {
+    display: block;
+}

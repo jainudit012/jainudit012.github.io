@@ -440,6 +440,7 @@ For displaying Pill on HOVER on item
     display: grid;
     grid-template-columns: 2fr 6rem 6rem 1fr;
     grid-template-rows: 85% 5% 10%;
+    overflow-x: hidden;
 }
 
 .site__info-rp__panels__front {
@@ -825,17 +826,17 @@ For displaying pill on nav item HOVER
 .ii__card {
     font-family: Lato, sans-serif;
     cursor: pointer;
+    border-bottom: 5px solid transparent;
 }
 
 .ii__card--selected {
     border-bottom: 5px solid #283FD9;
 }
 
-/*
-For adding border to card on HOVER 
+/* For adding border to card on HOVER  */
 .ii__card:hover {
     border-bottom: 5px solid #283FD9;
-} */
+}
 
 .ii__card__header {
     width: 100%;
@@ -892,12 +893,12 @@ For adding border to card on HOVER
     font-weight: 600;
 }
 
-/* 
-For changing card footer color on HOVER
+
+/* For changing card button color on HOVER */
 .ii__card:hover .ii__card__btn-text {
     color: #283fd9;
     font-weight: 600;
-} */
+}
 
 .ii__card__btn-svg {
     fill: #283fd9;
@@ -908,11 +909,19 @@ For changing card footer color on HOVER
     display: inline;
 }
 
-/* 
-For displaying arrow in card footer on HOVER
+
+/* For displaying arrow in card footer on HOVER */
 .ii__card:hover .ii__card__btn-svg {
     display: inline;
-} */
+}
+
+.ii__card__no-blogs {
+    font-size: 1.8rem;
+    color: rgba(21, 21, 21, 0.3);
+    font-weight: 900;
+    text-align: center;
+    margin-top: -3rem;
+}
 
 .site__info-wcu {
     background-color: #eef2f3;

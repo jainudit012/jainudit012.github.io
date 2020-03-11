@@ -24,26 +24,26 @@ try{
         console.log('next')
         counter++
 
-        const currList = filterItemData.items.slice(maxFilterItemsInList*counter, maxFilterItemsInList*(counter + 1))
-        const prevList = filterItemData.items.slice(maxFilterItemsInList*(counter - 1), maxFilterItemsInList*counter)
+        const currListToDisplay = filterItemData.items.slice(maxFilterItemsInList*counter, maxFilterItemsInList*(counter + 1))
+        const prevListToHide = filterItemData.items.slice(maxFilterItemsInList*(counter - 1), maxFilterItemsInList*counter)
 
-        addClassToMultiple(prevList, 'hidden')
-        removeClassFromMultiple(currList, 'hidden')
+        addClassToMultiple(prevListToHide, 'hidden')
+        removeClassFromMultiple(currListToDisplay, 'hidden')
         removeClassFromSvg(backButton, 'disabled-paginator-fixed')
-        if(currList.length < maxFilterItemsInList || (currList.length*(counter+1) === filterItemData.items.length)) addClassToSvg(nextButton, 'disabled-paginator-fixed')
+        if(currListToDisplay.length < maxFilterItemsInList || (currListToDisplay.length*(counter+1) === filterItemData.items.length)) addClassToSvg(nextButton, 'disabled-paginator-fixed')
     })
 
     backButton.addEventListener('click', ()=>{
         console.log('back')
         counter--
 
-        const currList = filterItemData.items.slice(maxFilterItemsInList*counter, maxFilterItemsInList*(counter + 1))
-        const prevList = filterItemData.items.slice(maxFilterItemsInList*(counter + 1), maxFilterItemsInList*(counter + 2))
+        const currListToDisplay = filterItemData.items.slice(maxFilterItemsInList*counter, maxFilterItemsInList*(counter + 1))
+        const prevListToHide = filterItemData.items.slice(maxFilterItemsInList*(counter + 1), maxFilterItemsInList*(counter + 2))
 
-        addClassToMultiple(prevList, 'hidden')
-        removeClassFromMultiple(currList, 'hidden')
+        addClassToMultiple(prevListToHide, 'hidden')
+        removeClassFromMultiple(currListToDisplay, 'hidden')
         removeClassFromSvg(nextButton, 'disabled-paginator-fixed')
-        if(currList[0] === filterItemData.items[0]) addClassToSvg(backButton, 'disabled-paginator-fixed')
+        if(currListToDisplay[0] === filterItemData.items[0]) addClassToSvg(backButton, 'disabled-paginator-fixed')
     })
 }catch(ex){
     console.log(ex)

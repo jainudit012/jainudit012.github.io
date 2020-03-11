@@ -1,18 +1,19 @@
 .site__header {
     background-color: #09070a;
-    padding: 1rem 14rem;
+    padding: 9.24rem 14rem 0 14rem;
 }
 
 .site__nav {
     display: flex;
-    align-items: flex-end;
-    padding-top: 8.2rem 
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 2.35rem;
 }
 
 .nav__logo__link {
     width: 15%;
     margin-right: auto;
-    transform: translateY(-50%);
     cursor: pointer;
 }
 
@@ -22,13 +23,14 @@
 
 .nav__list__wrapper {
     display: flex;
+    width: 60%;
     justify-content: space-between;
 }
 
 .nav__list__item {
     font-size: 2rem;
     font-weight: 600;
-    padding: 2rem;
+    padding: 3.15rem 2rem;
     position: relative;
 }
 
@@ -39,7 +41,7 @@
 
 .nav__list__item:hover {
     z-index: 1;
-    padding: 1.7rem;
+    padding: 2.85rem 1.7rem;
     border: 3px solid rgba(40, 63, 217, 0.15);
 }
 
@@ -74,20 +76,13 @@
     background-color: #283fd9;
 }
 
-.nav__hr {
-    border-color:#333;
-    margin-top: 2rem;
-}
-
 .site__main {
     display: grid;
     grid-template-columns: 12fr 35px 1fr;
-    transform: translateY(-5px);
     overflow: hidden;
 }
 
 .site__section__wrapper{
-    display: flex;
     grid-column: 1/-1;
     grid-row: 1/-1;
     position: relative;
@@ -390,27 +385,24 @@
     display: none;
 }
 
-.filter-item__selected {
-    opacity: 1;
-}
-
-/* 
-For changing text color of item on HOVER
-.site__info-rp__fixed__filter-item:hover .site__info-rp__fixed__filter-item-description {
+/* .filter-item__selected {
     opacity: 1;
 } */
 
-.filter__pill-selected {
-    margin-top: 1.05rem;
-    display: inline-block;
+.fixed__filter-item-selected .site__info-rp__fixed__filter-item-description {
+    opacity: 1;
 }
 
-/* 
-For displaying Pill on HOVER on item
-.site__info-rp__fixed__filter-item:hover .site__info-rp__fixed__filter__pill {
+/* .filter__pill-selected {
     margin-top: 1.05rem;
     display: inline-block;
 } */
+
+
+.fixed__filter-item-selected .site__info-rp__fixed__filter__pill {
+    margin-top: 1.05rem;
+    display: inline-block;
+}
 
 .site__info-rp__fixed__filter-paginator-box {
     display: flex;
@@ -425,6 +417,8 @@ For displaying Pill on HOVER on item
 .disabled-paginator-fixed {
     opacity: 0.3;
     fill: #151515;
+    cursor: default;
+    pointer-events: none;
 }
 
 .site__info-rp__fixed__filter-paginator-dot {
@@ -1363,12 +1357,12 @@ For displaying pill on nav item HOVER
 
 .footer__copyright {
     background-color: #131415;
-    border-top: 1px solid #333;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 9rem 0;
     text-align: center;
 }
 
 .footer__copyright__text {
   font-size: 1.4rem;
-  color: rgb(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.4);
 }

@@ -437,6 +437,11 @@
     overflow-x: hidden;
 }
 
+.site__info-rp__panels {
+    display: flex;
+    flex-direction: column;
+}
+
 .site__info-rp__panels__front {
     opacity: 0.95;
     border-radius: 2rem 0 0 0;
@@ -498,7 +503,7 @@
 }
 
 .site__info-rp__panels__description {
-    margin: 48.6rem 10.8rem 0 12rem;
+    margin: 48.6rem 10.8rem 21.4rem 12rem;
     color: #ffffff;
 }
 

@@ -9,18 +9,7 @@ const noBlogElement = document.getElementById('no__blogs')
 
 const blogWrapper = document.getElementById('ii__card__box')
 
-const allBlogs = []
-
-function loadAllBlogs(){
-    const numberOfBlogs = blogWrapper ? blogWrapper.children.length : 0
-    if(numberOfBlogs !== 0){
-        for(i=0;i<numberOfBlogs;i++){
-            allBlogs.push(document.getElementById(`ii__card-${i+1}`))
-        }
-    }
-}
-
-function filterBlogs(tag){
+function filterBlogs(tag, allBlogs){
     let filteredBlogs = []
     let hiddenBlogs = []
     if (tag === 'all') {
@@ -42,48 +31,48 @@ function filterBlogs(tag){
 }
  
 try{
-    loadAllBlogs()
-
+    const allBlogData = loadElementsToArray([], 'ii__card-', blogWrapper ? blogWrapper.children.length : 0)
+    
     allPostTab.addEventListener('click', ()=>{
         addClass(allPostTab, 'ii__nav__list-item--selected')
         removeClassFromMultiple([projectManagementTab, devopsTab, perfromanceTab, uxTab, applicationsTab, startupTab], 'ii__nav__list-item--selected')
-        filterBlogs('all')
+        if(allBlogData.valid) filterBlogs('all', allBlogData.items)
     })
     
     projectManagementTab.addEventListener('click', ()=>{
         addClass(projectManagementTab, 'ii__nav__list-item--selected')
         removeClassFromMultiple([allPostTab, devopsTab, perfromanceTab, uxTab, applicationsTab, startupTab], 'ii__nav__list-item--selected')
-        filterBlogs('pm')
+        if(allBlogData.valid) filterBlogs('pm', allBlogData.items)
     })
     
     devopsTab.addEventListener('click', ()=>{
         addClass(devopsTab, 'ii__nav__list-item--selected')
         removeClassFromMultiple([allPostTab, projectManagementTab, perfromanceTab, uxTab, applicationsTab, startupTab], 'ii__nav__list-item--selected')
-        filterBlogs('dev')
+        if(allBlogData.valid) filterBlogs('dev', allBlogData.items)
     })
     
     perfromanceTab.addEventListener('click', ()=>{
         addClass(perfromanceTab, 'ii__nav__list-item--selected')
         removeClassFromMultiple([allPostTab, projectManagementTab, devopsTab, uxTab, applicationsTab, startupTab], 'ii__nav__list-item--selected')
-        filterBlogs('per')
+        if(allBlogData.valid) filterBlogs('per', allBlogData.items)
     })
     
     uxTab.addEventListener('click', ()=>{
         addClass(uxTab, 'ii__nav__list-item--selected')
         removeClassFromMultiple([allPostTab, projectManagementTab, devopsTab, perfromanceTab, applicationsTab, startupTab], 'ii__nav__list-item--selected')
-        filterBlogs('ux')
+        if(allBlogData.valid) filterBlogs('ux', allBlogData.items)
     })
     
     applicationsTab.addEventListener('click', ()=>{
         addClass(applicationsTab, 'ii__nav__list-item--selected')
         removeClassFromMultiple([allPostTab, projectManagementTab, devopsTab, perfromanceTab, uxTab, startupTab], 'ii__nav__list-item--selected')
-        filterBlogs('app')
+        if(allBlogData.valid) filterBlogs('app', allBlogData.items)
     })
     
     startupTab.addEventListener('click', ()=>{
         addClass(startupTab, 'ii__nav__list-item--selected')
         removeClassFromMultiple([allPostTab, projectManagementTab, devopsTab, perfromanceTab, uxTab, applicationsTab], 'ii__nav__list-item--selected')
-        filterBlogs('sta')
+        if(allBlogData.valid) filterBlogs('sta', allBlogData.items)
     })
 }catch(ex){
     console.log(ex)

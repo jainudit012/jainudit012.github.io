@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/main.css">
-    <script src="./scripts/utility.js" async defer></script>
+    <script src="./scripts/utility.js"></script>
     <script src="./scripts/mastScroller.js" async defer></script>
     <script src="./scripts/wwdCardSelector.js" async defer></script>
     <script src="./scripts/blogFilter.js" async defer></script>
+    <script src="./scripts/projectListFilter.js" async defer></script>
     <title>OPSCALE</title>
 </head>
 <body>
@@ -41,7 +42,6 @@
                 <li class="nav__list__item" id="ctu__link"><a href="#" class="nav__list__link">Contact&nbsp;Us</a></li>
             </ul>
         </nav>
-        <hr class="nav__hr">
     </header>
     <main class="site__main">
         <div class="site__section__wrapper">
@@ -185,34 +185,42 @@
         <div class="site__info-rp__fixed">
             <h1 class="site__info-rp__fixed__heading">Recent&nbsp;Projects</h1>
             <p class="site__info-rp__fixed__text">With deep expertise across a vast range of engineering and consulting disciplines, WE INNOVATE ACROSS DIVERSE MARKETS GLOBALLY to deliver game changing products/services.</p>
-            <ul class="site__info-rp__fixed__filter-list">
-                <li class="site__info-rp__fixed__filter-item fixed__filter-item-selected">
-                    <div class="site__info-rp__fixed__filter-item-description filter-item__selected">All Industries</div>
-                    <div class="site__info-rp__fixed__filter__pill filter__pill-selected"></div>
+            <ul class="site__info-rp__fixed__filter-list" id="rp__list">
+                <li class="site__info-rp__fixed__filter-item fixed__filter-item-selected" id="rp__filter-1" data-filterTag="all">
+                    <div class="site__info-rp__fixed__filter-item-description">All Industries</div>
+                    <div class="site__info-rp__fixed__filter__pill"></div>
                 </li>
-                <li class="site__info-rp__fixed__filter-item">
+                <li class="site__info-rp__fixed__filter-item" id="rp__filter-2" data-filterTag="hel">
                     <div class="site__info-rp__fixed__filter-item-description">Healthcare</div>
                     <div class="site__info-rp__fixed__filter__pill"></div>
                 </li>
-                <li class="site__info-rp__fixed__filter-item">
+                <li class="site__info-rp__fixed__filter-item" id="rp__filter-3" data-filterTag="tec">
                     <div class="site__info-rp__fixed__filter-item-description">Technology</div>
                     <div class="site__info-rp__fixed__filter__pill"></div>
                 </li>
-                <li class="site__info-rp__fixed__filter-item">
+                <li class="site__info-rp__fixed__filter-item" id="rp__filter-4" data-filterTag="ai">
                     <div class="site__info-rp__fixed__filter-item-description">Articificial Intelligence</div>
                     <div class="site__info-rp__fixed__filter__pill"></div>
                 </li>
-                <li class="site__info-rp__fixed__filter-item">
+                <li class="site__info-rp__fixed__filter-item" id="rp__filter-5" data-filterTag="met">
                     <div class="site__info-rp__fixed__filter-item-description">Media &amp; Entertainment</div>
+                    <div class="site__info-rp__fixed__filter__pill"></div>
+                </li>
+                <li class="site__info-rp__fixed__filter-item hidden" id="rp__filter-6" data-filterTag="fin">
+                    <div class="site__info-rp__fixed__filter-item-description">Finance</div>
+                    <div class="site__info-rp__fixed__filter__pill"></div>
+                </li>
+                <li class="site__info-rp__fixed__filter-item hidden" id="rp__filter-7" data-filterTag="enr">
+                    <div class="site__info-rp__fixed__filter-item-description">Energy</div>
                     <div class="site__info-rp__fixed__filter__pill"></div>
                 </li>
             </ul>
             <div class="site__info-rp__fixed__filter-paginator-box">
-                <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="site__info-rp__fixed__filter-paginator disabled-paginator-fixed">
+                <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="site__info-rp__fixed__filter-paginator disabled-paginator-fixed" id="rp__list-bwd">
                     <path id="prefix__Thin_Arrow-1" d="M8.527 30.913l10.938 10.981a1.755 1.755 0 002.46-2.5l-7.951-7.954h25.653a1.757 1.757 0 100-3.514H13.974l7.995-7.995a1.77 1.77 0 00-2.5-2.5L8.527 28.409a1.75 1.75 0 000 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
                 </svg>
                 <span class="site__info-rp__fixed__filter-paginator-dot">.</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="site__info-rp__fixed__filter-paginator">
+                <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="site__info-rp__fixed__filter-paginator" id="rp__list-fwd">
                     <path id="prefix__Thin_Arrow-2" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
                 </svg>
             </div>
@@ -794,5 +802,4 @@
         <p class="footer__copyright__text">&copy; 2020 OPSCALE TECHNOLOGIES (OPC) PRIVATE LIMITED, INDIA</p>
     </footer>
 </body>
-
 </html>

@@ -1,0 +1,107 @@
+function paginate(nextBtnId, backBtnId, dataArray, disabledPaginationClass, numItemsToShow, toggleItemClass) {
+    try{
+        const nextButton = document.getElementById(nextBtnId)
+        const backButton = document.getElementById(backBtnId)
+
+        let counter = 0
+    
+        nextButton.addEventListener('click', ()=>{
+            counter++
+    
+            const currListToDisplay = dataArray.slice(numItemsToShow*counter, numItemsToShow*(counter + 1))
+            const prevListToHide = dataArray.slice(numItemsToShow*(counter - 1), numItemsToShow*counter)
+    
+            addClassToMultiple(prevListToHide, toggleItemClass)
+            removeClassFromMultiple(currListToDisplay, toggleItemClass)
+            removeClassFromSvg(backButton, disabledPaginationClass)
+            if(currListToDisplay.length < numItemsToShow || (currListToDisplay.length*(counter+1) === dataArray.length)) addClassToSvg(nextButton, disabledPaginationClass)
+        })
+    
+        backButton.addEventListener('click', ()=>{
+            counter--
+    
+            const currListToDisplay = dataArray.slice(numItemsToShow*counter, numItemsToShow*(counter + 1))
+            const prevListToHide = dataArray.slice(numItemsToShow*(counter + 1), numItemsToShow*(counter + 2))
+    
+            addClassToMultiple(prevListToHide, toggleItemClass)
+            removeClassFromMultiple(currListToDisplay, toggleItemClass)
+            removeClassFromSvg(nextButton, disabledPaginationClass)
+            if(currListToDisplay[0] === dataArray[0]) addClassToSvg(backButton, disabledPaginationClass)
+        })
+    }catch(ex){
+        console.log(ex)
+    }
+}
+
+function otherPaginate(dataArray, classConfig, wrapper) {
+    try{
+        let nextButton = document.getElementById(classConfig.nextBtnId)
+        let backButton = document.getElementById(classConfig.backBtnId)
+
+        let counter = 0
+
+        addClass(backButton.parentNode, classConfig.disabledPaginationClass)
+        if(dataArray.length > 1){
+            removeClass(nextButton.parentNode, 'hidden')
+            removeClass(nextButton.parentNode, classConfig.disabledPaginationClass)
+        }
+
+        if(wrapper){
+            wrapper.addEventListener('filteredDataChanged', e => {
+                counter = 0
+                dataArray = e.detail.data
+                addClass(backButton.parentNode, classConfig.disabledPaginationClass)
+                if(dataArray.length > 1){
+                    removeClass(nextButton.parentNode, classConfig.disabledPaginationClass)
+                }else{
+                    addClass(nextButton.parentNode, classConfig.disabledPaginationClass)
+                }
+            }, true)
+        }
+        
+        nextButton.addEventListener('click', ()=>{
+            counter++
+
+            const currListToDisplay = dataArray.slice(counter, (counter + 1))[0]
+            const prevListToHide = dataArray.slice((counter - 1), counter)[0]
+            const nextSlide = dataArray.slice((counter+1), (counter + 2))[0]
+    
+            addClass(prevListToHide, 'hidden')
+            removeClass(prevListToHide, classConfig.frontClass)
+            removeClass(currListToDisplay, classConfig.backClass)
+            removeClass(currListToDisplay, classConfig.nextClass)
+            addClass(currListToDisplay, classConfig.frontClass)
+            removeClass(backButton.parentNode, classConfig.disabledPaginationClass)
+
+            console.log(nextSlide)
+
+            if(nextSlide && nextSlide.className.indexOf('hidden') === -1) {
+                addClass(nextSlide, classConfig.nextClass)
+            }
+            if(!nextSlide) {
+                addClass(nextButton.parentNode, classConfig.disabledPaginationClass)
+                addClass(nextButton.parentNode, 'hidden')
+            }
+        })
+    
+        backButton.addEventListener('click', ()=>{
+            counter--
+
+            const currListToDisplay = dataArray.slice(counter, (counter + 1))[0]
+            const nextSlide = dataArray.slice((counter + 1), (counter +2))[0]
+            const prevListToHide = dataArray.slice((counter+2), (counter + 3))[0]
+
+            removeClass(currListToDisplay, 'hidden')
+            addClass(currListToDisplay, classConfig.frontClass)
+            removeClass(nextSlide, classConfig.frontClass)
+            addClass(nextSlide, classConfig.backClass)
+            addClass(nextSlide, classConfig.nextClass)
+            removeClass(prevListToHide, classConfig.nextClass)
+            removeClass(nextButton.parentNode, classConfig.disabledPaginationClass)
+            removeClass(nextButton.parentNode, 'hidden')
+            if(currListToDisplay.id === dataArray[0].id) addClass(backButton.parentNode, classConfig.disabledPaginationClass)
+        })
+    }catch(ex){
+        console.log(ex)
+    }
+}

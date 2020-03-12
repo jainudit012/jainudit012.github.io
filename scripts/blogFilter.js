@@ -31,7 +31,7 @@ function filterBlogs(tag, allBlogs){
 }
  
 try{
-    const allBlogData = loadElementsToArray([], 'ii__card-', blogWrapper ? blogWrapper.children.length : 0)
+    const allBlogData = loadElementsToArray('ii__card-', blogWrapper)
     
     allPostTab.addEventListener('click', ()=>{
         addClass(allPostTab, 'ii__nav__list-item--selected')

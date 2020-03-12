@@ -6,7 +6,7 @@
  * e.g., 'star mt-1'
  */
 function addClass(element, className){
-    const arrOfClassNames = element.className.split(" ")
+    const arrOfClassNames = element ? element.className.split(" ") : [className]
     if(arrOfClassNames.indexOf(className) === -1) element.className += ` ${className}`
 }
 
@@ -18,7 +18,7 @@ function addClass(element, className){
  * e.g., 'star mt-1'
  */
 function addClassToSvg(element, className){
-    const arrOfClassNames = element.className.baseVal.split(" ")
+    const arrOfClassNames = element ? element.className.baseVal.split(" ") : [className]
     if(arrOfClassNames.indexOf(className) === -1) element.className.baseVal += ` ${className}`
 }
 
@@ -30,7 +30,7 @@ function addClassToSvg(element, className){
  * e.g., 'star mt-1'
  */
 function removeClass(element, className){
-    element.className = element.className.replace(className, "")
+    if(element) element.className = element.className.replace(` ${className}`, "")
 }
 
 /**
@@ -41,7 +41,7 @@ function removeClass(element, className){
  * e.g., 'star mt-1'
  */
 function removeClassFromSvg(element, className){
-    element.className.baseVal = element.className.baseVal.replace(className, "")
+    if(element) element.className.baseVal = element.className.baseVal.replace(` ${className}`, "")
 }
 
 /**
@@ -73,18 +73,12 @@ function removeClassFromMultiple(elementsArray, className){
 
 /**
  * 
- * @param {Array} array  The Source Array
  * @param {String} idPattern Pattern should be in the form of pattern1, pattern2, pattern3 ...
- * @param {Integer} numItems Should be Integer
+ * @param {HTMLElement} itemsWrapper Should be the wrapper HTML element of the items
  *  returns { items: Array, valid: Boolean }
  */
-function loadElementsToArray(array, idPattern, numItems){
-    if(numItems > 0){
-        for(i=0;i<numItems;i++){
-            const element = document.getElementById(`${idPattern}${i+1}`)
-            array.push(element)
-        }
-    }
+function loadElementsToArray(idPattern, itemsWrapper){
+    const array = [].slice.call(itemsWrapper.children).filter(el=> el.id.indexOf(idPattern) > -1).sort()
     return { items: array, valid: array.length != 0 }
 }
 

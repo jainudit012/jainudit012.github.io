@@ -2,7 +2,7 @@
  * 
  * @param {HTMLElement} element A HTML element on which a certain class is to be applied
  * @param {String} className The class that is to be applied. 
- * Can be multiple with a space in between. 
+ * Can be multiple with a space in between. ** Should avoid using multiple classes **
  * e.g., 'star mt-1'
  */
 function addClass(element, className){
@@ -14,7 +14,7 @@ function addClass(element, className){
  * 
  * @param {HTMLElement} element A SVG HTML element on which a certain class is to be applied
  * @param {String} className The class that is to be applied. 
- * Can be multiple with a space in between. 
+ * Can be multiple with a space in between. ** Should avoid using multiple classes **
  * e.g., 'star mt-1'
  */
 function addClassToSvg(element, className){
@@ -26,7 +26,7 @@ function addClassToSvg(element, className){
  * 
  * @param {HTMLElement} element A HTML element on which a certain class is to be removed
  * @param {String} className The class that is to be removed.
- * Can be multiple with a space in between but should follow the order of occurence on the element. 
+ * Can be multiple with a space in between but should follow the order of occurence on the element. ** Should avoid using multiple classes **
  * e.g., 'star mt-1'
  */
 function removeClass(element, className){
@@ -37,7 +37,7 @@ function removeClass(element, className){
  * 
  * @param {HTMLElement} element A SVG HTML element on which a certain class is to be removed
  * @param {String} className The class that is to be removed.
- * Can be multiple with a space in between but should follow the order of occurence on the element. 
+ * Can be multiple with a space in between but should follow the order of occurence on the element. ** Should avoid using multiple classes **
  * e.g., 'star mt-1'
  */
 function removeClassFromSvg(element, className){
@@ -48,7 +48,7 @@ function removeClassFromSvg(element, className){
  * 
  * @param {Array[HtmlElement]} elementsArray An array containing HTML elements on which same class is to be applied
  * @param {String} className The class that is to be applied.
- * Can be multiple with a space in between. 
+ * Can be multiple with a space in between. ** Should avoid using multiple classes **
  * e.g., 'star mt-1'
  */
 function addClassToMultiple(elementsArray, className){
@@ -61,7 +61,7 @@ function addClassToMultiple(elementsArray, className){
  * 
  * @param {Array[HtmlElement]} elementsArray An array containing HTML elements on which same class is to be removed
  * @param {String} className The class that is to be removed.
- * Can be multiple with a space in between but should follow the order of occurence on the element. 
+ * Can be multiple with a space in between but should follow the order of occurence on the element. ** Should avoid using multiple classes **
  * e.g., 'star mt-1'.
  * @function removeClass(element, className) Used underneath.
  */
@@ -84,8 +84,9 @@ function loadElementsToArray(idPattern, itemsWrapper){
 
 /**
  * 
- * @param {Array[HtmlElement]} itemsArray 
- * @param {String} className
+ * @param {Array[HtmlElement]} itemsArray array of HTML elements on which a click event is to be added
+ * @param {String} className the className to be toggled on the selected item
+ * @param {Boolean} raiseSelectedEvent state whether an event of item selection should be raised or not
  */
 function addSelectItemListener(itemsArray, className, raiseSelectedEvent){
     itemsArray.forEach(item => {

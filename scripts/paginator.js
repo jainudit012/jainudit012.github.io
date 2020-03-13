@@ -40,21 +40,21 @@ function otherPaginate(dataArray, classConfig, wrapper) {
 
         let counter = 0
 
-        addClass(backButton.parentNode, classConfig.disabledPaginationClass)
+        addClass(backButton, classConfig.disabledPaginationClass)
         if(dataArray.length > 1){
-            removeClass(nextButton.parentNode, 'hidden')
-            removeClass(nextButton.parentNode, classConfig.disabledPaginationClass)
+            removeClass(nextButton, 'hidden')
+            removeClass(nextButton, classConfig.disabledPaginationClass)
         }
 
         if(wrapper){
             wrapper.addEventListener('filteredDataChanged', e => {
                 counter = 0
                 dataArray = e.detail.data
-                addClass(backButton.parentNode, classConfig.disabledPaginationClass)
+                addClass(backButton, classConfig.disabledPaginationClass)
                 if(dataArray.length > 1){
-                    removeClass(nextButton.parentNode, classConfig.disabledPaginationClass)
+                    removeClass(nextButton, classConfig.disabledPaginationClass)
                 }else{
-                    addClass(nextButton.parentNode, classConfig.disabledPaginationClass)
+                    addClass(nextButton, classConfig.disabledPaginationClass)
                 }
             }, true)
         }
@@ -71,16 +71,14 @@ function otherPaginate(dataArray, classConfig, wrapper) {
             removeClass(currListToDisplay, classConfig.backClass)
             removeClass(currListToDisplay, classConfig.nextClass)
             addClass(currListToDisplay, classConfig.frontClass)
-            removeClass(backButton.parentNode, classConfig.disabledPaginationClass)
-
-            console.log(nextSlide)
+            removeClass(backButton, classConfig.disabledPaginationClass)
 
             if(nextSlide && nextSlide.className.indexOf('hidden') === -1) {
                 addClass(nextSlide, classConfig.nextClass)
             }
             if(!nextSlide) {
-                addClass(nextButton.parentNode, classConfig.disabledPaginationClass)
-                addClass(nextButton.parentNode, 'hidden')
+                addClass(nextButton, classConfig.disabledPaginationClass)
+                addClass(nextButton, 'hidden')
             }
         })
     
@@ -97,9 +95,9 @@ function otherPaginate(dataArray, classConfig, wrapper) {
             addClass(nextSlide, classConfig.backClass)
             addClass(nextSlide, classConfig.nextClass)
             removeClass(prevListToHide, classConfig.nextClass)
-            removeClass(nextButton.parentNode, classConfig.disabledPaginationClass)
-            removeClass(nextButton.parentNode, 'hidden')
-            if(currListToDisplay.id === dataArray[0].id) addClass(backButton.parentNode, classConfig.disabledPaginationClass)
+            removeClass(nextButton, classConfig.disabledPaginationClass)
+            removeClass(nextButton, 'hidden')
+            if(currListToDisplay.id === dataArray[0].id) addClass(backButton, classConfig.disabledPaginationClass)
         })
     }catch(ex){
         console.log(ex)

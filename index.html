@@ -15,6 +15,8 @@
     <script src="./scripts/wwdCardSelector.js" async defer></script>
     <script src="./scripts/blogFilter.js" async defer></script>
     <script src="./scripts/projectListFilter.js" async defer></script>
+    <script src="./scripts/ssFlipper.js" async defer></script>
+    <script src="./scripts/motFlipper.js" async defer></script>
     <title>OPSCALE</title>
 </head>
 <body>
@@ -298,13 +300,13 @@
                 </div>
             </div>
             <div class="site__info-rp__panels-paginator-wrapper">
-                <div class="site__info-rp__panels-paginator-box site__info-rp__panels-paginator-box-left disabled-paginator">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="site__info-rp__panels-paginator site__info-rp__panels-paginator-left" id="rp__panel-bck">
+                <div class="site__info-rp__panels-paginator-box site__info-rp__panels-paginator-box-left disabled-paginator" id="rp__panel-bck">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="site__info-rp__panels-paginator site__info-rp__panels-paginator-left">
                         <path id="prefix__Thin_Arrow-3" d="M8.527 30.913l10.938 10.981a1.755 1.755 0 002.46-2.5l-7.951-7.954h25.653a1.757 1.757 0 100-3.514H13.974l7.995-7.995a1.77 1.77 0 00-2.5-2.5L8.527 28.409a1.75 1.75 0 000 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
                     </svg>
                 </div>
-                <div class="site__info-rp__panels-paginator-box site__info-rp__panels-paginator-box-right">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="site__info-rp__panels-paginator site__info-rp__panels-paginator-right" id="rp__panel-fwd">
+                <div class="site__info-rp__panels-paginator-box site__info-rp__panels-paginator-box-right" id="rp__panel-fwd">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="site__info-rp__panels-paginator site__info-rp__panels-paginator-right">
                         <path id="prefix__Thin_Arrow-4" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
                     </svg>
                 </div>
@@ -341,8 +343,8 @@
         </div>
     </section>
     <section class="site__info-ss">
-        <div class="ss__flipper">
-            <div class="ss__flipper__front">
+        <div class="ss__flipper" id="ss__flipper">
+            <div class="ss__flipper-panel ss__flipper__front" id="ss__panel-1">
                 <div class="ss__panels__header">
                     <div class="ss__panels__header__pageNum">01</div>
                     <div class="ss__panels__header__text">
@@ -357,13 +359,58 @@
                 </div>
                 <p class="ss__info__panels-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using it is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
             </div>
+            <div class="ss__flipper-panel hidden" id="ss__panel-2">
+                <div class="ss__panels__header">
+                    <div class="ss__panels__header__pageNum">02</div>
+                    <div class="ss__panels__header__text">
+                        <div  class="ss__panels__header__name">Jonan&nbsp;S&nbsp;Kahlili</div>
+                        <div class="ss__panels__header__industry">Research Scientist at MD Anderson Cancer Center Texas</div>
+                    </div>
+                </div>
+                <img src="./assets/johan.jpg" alt="User Image" srcset="./assets/johan.jpg 1x, ./assets/johan@2x.jpg 2x, ./assets/johan@3x.jpg 3x" class="ss__info__img">
+                <div class="ss__info__heading-box">
+                    <h2 class="ss__info__heading">Amazing Determination to Quality</h2>
+                    <img src="./assets/quotes.svg" alt='"' class="ss__info__quotes">
+                </div>
+                <p class="ss__info__panels-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using it is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </div>
+            <div class="ss__flipper-panel hidden" id="ss__panel-3">
+                <div class="ss__panels__header">
+                    <div class="ss__panels__header__pageNum">03</div>
+                    <div class="ss__panels__header__text">
+                        <div  class="ss__panels__header__name">Jonan&nbsp;S&nbsp;Kahlili</div>
+                        <div class="ss__panels__header__industry">Research Scientist at MD Anderson Cancer Center Texas</div>
+                    </div>
+                </div>
+                <img src="./assets/johan.jpg" alt="User Image" srcset="./assets/johan.jpg 1x, ./assets/johan@2x.jpg 2x, ./assets/johan@3x.jpg 3x" class="ss__info__img">
+                <div class="ss__info__heading-box">
+                    <h2 class="ss__info__heading">Amazing Determination to Quality</h2>
+                    <img src="./assets/quotes.svg" alt='"' class="ss__info__quotes">
+                </div>
+                <p class="ss__info__panels-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using it is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </div>
+            <div class="ss__flipper-panel hidden" id="ss__panel-4">
+                <div class="ss__panels__header">
+                    <div class="ss__panels__header__pageNum">04</div>
+                    <div class="ss__panels__header__text">
+                        <div  class="ss__panels__header__name">Jonan&nbsp;S&nbsp;Kahlili</div>
+                        <div class="ss__panels__header__industry">Research Scientist at MD Anderson Cancer Center Texas</div>
+                    </div>
+                </div>
+                <img src="./assets/johan.jpg" alt="User Image" srcset="./assets/johan.jpg 1x, ./assets/johan@2x.jpg 2x, ./assets/johan@3x.jpg 3x" class="ss__info__img">
+                <div class="ss__info__heading-box">
+                    <h2 class="ss__info__heading">Amazing Determination to Quality</h2>
+                    <img src="./assets/quotes.svg" alt='"' class="ss__info__quotes">
+                </div>
+                <p class="ss__info__panels-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using it is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </div>
             <div class="ss__panels-paginator-wrapper">
-                <div class="ss__panels-paginator-box ss__panels-paginator-box-left ss__disabled-paginator">
+                <div class="ss__panels-paginator-box ss__panels-paginator-box-left ss__disabled-paginator" id="ss__panel-bck">
                     <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="ss__panels-paginator ss__panels-paginator-left">
                         <path id="prefix__Thin_Arrow-5" d="M8.527 30.913l10.938 10.981a1.755 1.755 0 002.46-2.5l-7.951-7.954h25.653a1.757 1.757 0 100-3.514H13.974l7.995-7.995a1.77 1.77 0 00-2.5-2.5L8.527 28.409a1.75 1.75 0 000 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
                     </svg>
                 </div>
-                <div class="ss__panels-paginator-box ss__panels-paginator-box-right">
+                <div class="ss__panels-paginator-box ss__panels-paginator-box-right" id="ss__panel-fwd">
                     <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="ss__panels-paginator ss__panels-paginator-right">
                         <path id="prefix__Thin_Arrow-6" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
                     </svg>
@@ -622,8 +669,8 @@
             </div>
         </div>
         <div class="mot__cards__container">
-            <div class="mot__cards__wrapper">
-                <div class="mot__cards mot__cards--front">
+            <div class="mot__cards__wrapper" id="mot__cards__wrapper">
+                <div class="mot__cards mot__cards--front" id="mot__card-1">
                     <header class="mot__cards__header">
                         <img src="./assets/anub.jpg" srcset="./assets/anub.jpg 1x, ./assets/anub@2x.jpg 2x, ./assets/anub@3x.jpg 3x" alt="Opscale Team Member" class="mot__cards__image">
                     </header>
@@ -662,7 +709,87 @@
                         </footer>
                     </div>
                 </div>
-                <div class="mot__cards mot__cards--back">
+                <div class="mot__cards mot__cards--back mot__cards--next" id="mot__card-2">
+                    <header class="mot__cards__header">
+                        <img src="./assets/tm.jpg" srcset="./assets/tm.jpg 1x, ./assets/tm@2x.jpg 2x, ./assets/tm@3x.jpg 3x" alt="Opscale Team Member" class="mot__cards__image">
+                    </header>
+                    <div class="mot__cards__body">
+                        <h3 class="mot__card--user-name">Name</h3>
+                        <p class="mot__card--user-designation">CEO</p>
+                        <div class="mot__card__pill"></div>
+                        <p class="mot__card--user-info">Running operations for a software company is hard. There are so many failure modes because of so many moving parts. How to build the code right and fast? …</p>
+                        <footer class="mot__cards__footer">
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>facebook</title>
+                                    <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>twitter</title>
+                                    <path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>linkedin2</title>
+                                    <path d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"></path>
+                                    <path d="M2 12h6v18h-6v-18z"></path>
+                                    <path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>github</title>
+                                    <path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
+                                </svg>
+                            </a>
+                        </footer>
+                    </div>
+                    <div class="mot__disabled__card--overlay"></div>
+                </div>
+                <div class="mot__cards mot__cards--back" id="mot__card-3">
+                    <header class="mot__cards__header">
+                        <img src="./assets/tm.jpg" srcset="./assets/tm.jpg 1x, ./assets/tm@2x.jpg 2x, ./assets/tm@3x.jpg 3x" alt="Opscale Team Member" class="mot__cards__image">
+                    </header>
+                    <div class="mot__cards__body">
+                        <h3 class="mot__card--user-name">Name</h3>
+                        <p class="mot__card--user-designation">CEO</p>
+                        <div class="mot__card__pill"></div>
+                        <p class="mot__card--user-info">Running operations for a software company is hard. There are so many failure modes because of so many moving parts. How to build the code right and fast? …</p>
+                        <footer class="mot__cards__footer">
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>facebook</title>
+                                    <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>twitter</title>
+                                    <path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>linkedin2</title>
+                                    <path d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"></path>
+                                    <path d="M2 12h6v18h-6v-18z"></path>
+                                    <path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>github</title>
+                                    <path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
+                                </svg>
+                            </a>
+                        </footer>
+                    </div>
+                    <div class="mot__disabled__card--overlay"></div>
+                </div>
+                <div class="mot__cards mot__cards--back" id="mot__card-4">
                     <header class="mot__cards__header">
                         <img src="./assets/tm.jpg" srcset="./assets/tm.jpg 1x, ./assets/tm@2x.jpg 2x, ./assets/tm@3x.jpg 3x" alt="Opscale Team Member" class="mot__cards__image">
                     </header>
@@ -704,12 +831,12 @@
                 </div>
             </div>
             <div class="mot__cards__paginator--wrapper">
-                <div class="mot__cards__paginator--box mot__disabled-paginator mot__cards__paginator-left">
+                <div class="mot__cards__paginator--box mot__cards__paginator-left mot__disabled-paginator" id="mot__card-bck">
                     <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="mot__cards__paginator">
                         <path id="prefix__Thin_Arrow-14" d="M8.527 30.913l10.938 10.981a1.755 1.755 0 002.46-2.5l-7.951-7.954h25.653a1.757 1.757 0 100-3.514H13.974l7.995-7.995a1.77 1.77 0 00-2.5-2.5L8.527 28.409a1.75 1.75 0 000 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
                     </svg>
                 </div>
-                <div class="mot__cards__paginator--box mot__cards__paginator-right">
+                <div class="mot__cards__paginator--box mot__cards__paginator-right" id="mot__card-fwd">
                     <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="mot__cards__paginator">
                         <path id="prefix__Thin_Arrow-15" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
                     </svg>
@@ -729,7 +856,7 @@
             <textarea class="tod__textarea" name="subject" id="subject" cols="30" rows="5" placeholder="Subject" aria-label="subject"></textarea>
             <button class="tod__form__btn" type="button" id="tod__btn">Submit</button>
         </form>
-        <div class="tod__floating-icon">
+        <div class="tod__floating-icon" id="floating__icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="30.822" height="30.822" viewBox="0 0 30.822 30.822" class="tod__floating-icon-svg">
                 <path id="prefix__XMLID_933_" d="M50.322 35.2a2.606 2.606 0 01-2.622 2.619H37.237V47.7a2.617 2.617 0 01-5.237 0v-9.881h-9.883a2.617 2.617 0 010-5.234H32V22.117a2.617 2.617 0 015.234 0v10.468H47.7a2.606 2.606 0 012.622 2.615z" transform="translate(-19.5 -19.5)"/>
             </svg>

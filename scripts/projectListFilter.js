@@ -8,13 +8,20 @@ try{
     const panelData = loadElementsToArray('rp__panels-', panelsWrapper)
     let filteredData = panelData.items
 
-    const classConfig = {
+    const classConfigOfPanels = {
         frontClass: 'site__info-rp__panels__front',
         backClass: 'site__info-rp__panels__back',
         nextClass: 'site__info-rp__panels__next',
         disabledPaginationClass: 'disabled-paginator',
         nextBtnId: 'rp__panel-fwd',
         backBtnId: 'rp__panel-bck'
+    }
+
+    const classConfigOfList = {
+        toggleItemClass: 'hidden',
+        disabledPaginationClass: 'disabled-paginator-fixed',
+        nextBtnId: 'rp__list-fwd',
+        backBtnId: 'rp__list-bck'
     }
     
     if(filterItemData.valid){
@@ -46,9 +53,9 @@ try{
             })
         })
     }
-    paginate('rp__list-fwd', 'rp__list-bck', filterItemData.items, 'disabled-paginator-fixed', maxFilterItemsInList, 'hidden')
+    paginate(filterItemData.items, maxFilterItemsInList, classConfigOfList)
 
-    otherPaginate(filteredData, classConfig, sectionWrapper)
+    otherPaginate(filteredData, classConfigOfPanels, sectionWrapper)
 
 }catch(ex){
     console.log(ex)

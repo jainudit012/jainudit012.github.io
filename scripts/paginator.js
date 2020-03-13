@@ -1,7 +1,7 @@
-function paginate(nextBtnId, backBtnId, dataArray, disabledPaginationClass, numItemsToShow, toggleItemClass) {
+function paginate(dataArray, numItemsToShow, classConfig) {
     try{
-        const nextButton = document.getElementById(nextBtnId)
-        const backButton = document.getElementById(backBtnId)
+        const nextButton = document.getElementById(classConfig.nextBtnId)
+        const backButton = document.getElementById(classConfig.backBtnId)
 
         let counter = 0
     
@@ -11,10 +11,10 @@ function paginate(nextBtnId, backBtnId, dataArray, disabledPaginationClass, numI
             const currListToDisplay = dataArray.slice(numItemsToShow*counter, numItemsToShow*(counter + 1))
             const prevListToHide = dataArray.slice(numItemsToShow*(counter - 1), numItemsToShow*counter)
     
-            addClassToMultiple(prevListToHide, toggleItemClass)
-            removeClassFromMultiple(currListToDisplay, toggleItemClass)
-            removeClassFromSvg(backButton, disabledPaginationClass)
-            if(currListToDisplay.length < numItemsToShow || (currListToDisplay.length*(counter+1) === dataArray.length)) addClassToSvg(nextButton, disabledPaginationClass)
+            addClassToMultiple(prevListToHide, classConfig.toggleItemClass)
+            removeClassFromMultiple(currListToDisplay, classConfig.toggleItemClass)
+            removeClassFromSvg(backButton, classConfig.disabledPaginationClass)
+            if(currListToDisplay.length < numItemsToShow || (currListToDisplay.length*(counter+1) === dataArray.length)) addClassToSvg(nextButton, classConfig.disabledPaginationClass)
         })
     
         backButton.addEventListener('click', ()=>{
@@ -23,10 +23,10 @@ function paginate(nextBtnId, backBtnId, dataArray, disabledPaginationClass, numI
             const currListToDisplay = dataArray.slice(numItemsToShow*counter, numItemsToShow*(counter + 1))
             const prevListToHide = dataArray.slice(numItemsToShow*(counter + 1), numItemsToShow*(counter + 2))
     
-            addClassToMultiple(prevListToHide, toggleItemClass)
-            removeClassFromMultiple(currListToDisplay, toggleItemClass)
-            removeClassFromSvg(nextButton, disabledPaginationClass)
-            if(currListToDisplay[0] === dataArray[0]) addClassToSvg(backButton, disabledPaginationClass)
+            addClassToMultiple(prevListToHide, classConfig.toggleItemClass)
+            removeClassFromMultiple(currListToDisplay, classConfig.toggleItemClass)
+            removeClassFromSvg(nextButton, classConfig.disabledPaginationClass)
+            if(currListToDisplay[0].id === dataArray[0].id) addClassToSvg(backButton, classConfig.disabledPaginationClass)
         })
     }catch(ex){
         console.log(ex)

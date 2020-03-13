@@ -764,6 +764,7 @@
 
 .ss__disabled-paginator {
     background-color: rgba(255, 255, 255, 0.352);
+    pointer-events: none;
 }
 
 .ss__info__text {
@@ -1070,6 +1071,7 @@ For displaying pill on nav item HOVER
     margin-top: 2rem;
     display: flex;
     align-items: baseline;
+    cursor: pointer;
 }
 
 .mot__info__sub-heading {
@@ -1113,10 +1115,17 @@ For displaying pill on nav item HOVER
 
 .mot__cards--front {
     border-bottom: 5px solid hsl(232, 70%, 50%, 1);
+    grid-column: 1/2;
 }
 
 .mot__cards--back {
+    grid-column: 2/-1;
+    display: none;
+}
+
+.mot__cards--next {
     position: relative;
+    display: grid;
 }
 
 .mot__disabled__card--overlay {

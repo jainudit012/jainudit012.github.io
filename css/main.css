@@ -30,42 +30,49 @@
 .nav__list__item {
     font-size: 2rem;
     font-weight: 600;
-    padding: 3.15rem 2rem;
     position: relative;
+    border: 3px solid transparent;
 }
 
-.nav__list__link:link, .nav__list__link:visited {
+.nav__list__link {
+    display: block;
+    padding: 3.15rem 2rem;
     cursor: pointer;
     color: #ffffff;
 }
 
 .nav__list__item:hover {
     z-index: 1;
-    padding: 2.85rem 1.7rem;
     border: 3px solid rgba(40, 63, 217, 0.15);
 }
 
 .nav__list__item__group  {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(174deg, #09070a 3%, #0A134E 97%);
+    border-radius: 0 0 15px 15px;
+    border: solid 2px rgba(40, 63, 217, 0.15);
+    backdrop-filter: blur(30px);
+    transition: opacity 250ms ease-in, transform 450ms ease-out;
 }
 
 .nav__list__item:hover  .nav__list__item__group {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    backdrop-filter: blur(30px);
-    border: solid 2px rgba(40, 63, 217, 0.15);
+    opacity: 1;
     top: 100%;
+    transform: translate(0,0);
+    visibility: visible;
     left: -3px;
-    background-image: linear-gradient(174deg, #09070a 3%, #0A134E 97%);
-    border-radius: 0 0 15px 15px;
 }
 
 .nav__list__item__group__item {
-    padding: 2rem;
     border: 1px solid rgba(40, 63, 217, 0.15);
     font-size: 1.8rem;
     font-weight: 500;
+    transition: background-color 300ms ease-out;
+}
+
+.nav__list__item__group__item .nav__list__link {
+    padding: 3rem;
 }
 
 .nav__list__item__group__item:last-child {
@@ -268,6 +275,7 @@
     border-radius: 50%;
     background-color: #fff;
     display: flex;
+    transition: background-color 300ms ease-out;
 }
 
 .card__selected .card__img__box {
@@ -283,6 +291,7 @@
     width: 3rem;
     height: 3rem;
     fill: #283fd9;
+    transition: fill 300ms ease-out;
 }
 
 .card__selected .card__img{
@@ -305,9 +314,9 @@
     width: 3.1rem;
     height: 0.6rem;
     border-radius: 8px;
-    background-color: #151515;
-    opacity: 0.2;
+    background-color: rgba(21, 21, 21, 0.2);
     margin: 1.22rem 0 2.58rem 0;
+    transition: background-color 200ms ease-out;
 }
 
 .card__selected .card__pill {
@@ -317,10 +326,10 @@
 
 
 /* For HOVER on card to trigger pill color change */
-.site__info-wwd__card:hover .card__pill {
+/* .site__info-wwd__card:hover .card__pill {
     opacity: 1;
     background-color: #283fd9;
-}
+} */
 
 .card__footer {
     opacity: 0.6;
@@ -340,6 +349,8 @@
 .site__info-rp__fixed {
     width: 44%;
     padding: 15.7rem 22.7rem 25.2rem 22.6rem;
+    display: grid;
+    grid-template-rows: 1fr 2fr 5fr 5rem;
 }
 
 .site__info-rp__fixed__heading {
@@ -360,12 +371,14 @@
 
 .site__info-rp__fixed__filter-list {
     margin-top: 5.7rem;
+    position: relative;
 }
 
 .site__info-rp__fixed__filter-item {
     margin-bottom: 2.5rem;
     height: 5rem;
     cursor: pointer;
+    transition: transform 400ms ease-out, opacity 400ms ease-out;
 }
 
 .site__info-rp__fixed__filter-item-description {
@@ -412,19 +425,18 @@
 .site__info-rp__fixed__filter-paginator {
     fill: #283fd9;
     cursor: pointer;
+    transition: fill 300ms ease-in;
 }
 
 .disabled-paginator-fixed {
-    opacity: 0.3;
-    fill: #151515;
+    fill: rgba(21, 21, 21, 0.3);
     cursor: default;
     pointer-events: none;
 }
 
 .site__info-rp__fixed__filter-paginator-dot {
     font-size: 4rem;
-    opacity: 0.2;
-    color: #151515;
+    color: rgba(21, 21, 21, 0.2);
     line-height: 1.2;
     margin: 0 2rem;
 }
@@ -435,31 +447,34 @@
     grid-template-columns: 2fr 6rem 6rem 1fr;
     grid-template-rows: 85% 5% 10%;
     overflow-x: hidden;
+    position: relative;
 }
 
 .site__info-rp__panels {
     display: flex;
     flex-direction: column;
+    grid-row: 1/-1;
+    grid-column: 3/-1;
+    width: 36vw;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 300ms ease-in;
 }
 
 .site__info-rp__panels__front {
     opacity: 0.8;
     border-radius: 2rem 0 0 0;
-    grid-row: 1/-1;
-    grid-column: 1/3;
-    z-index: 1;
-}
-
-.site__info-rp__panels__next {
-    z-index: 1;
+    z-index: 2;
 }
 
 .site__info-rp__panels__back {
     opacity: 1;
-    width: 33vw;
-    height: 100%;
-    grid-row: 1/-1;
-    grid-column: 3/-1;
+    z-index: 0;
+    transform: translateX(0);
+}
+
+.site__info-rp__panels__next {
+    z-index: 1;
 }
 
 #rp__panels-1{
@@ -569,7 +584,7 @@
     display: flex;
     grid-row: 2/3;
     grid-column: 2/3;
-    z-index: 1;
+    z-index: 3;
     margin-left: 3px;
     height: 5rem;
 }
@@ -578,6 +593,7 @@
     background-color: #283FD9;
     padding: 1.2rem 1.2rem 0.6rem 1.2rem;
     cursor: pointer;
+    transition: background-color 300ms ease-out;
 }
 
 .site__info-rp__panels-paginator {
@@ -816,12 +832,16 @@
 .ii__nav__list-item {
     font-family: Lato, sans-serif;
     line-height: 1.35;
-    color: rgba(19, 20, 21, 0.6);
     font-size: 2rem;
     cursor: pointer;
 }
 
-.ii__nav__list-item--selected {
+.ii__nav-item__heading {
+    color: rgba(19, 20, 21, 0.6);
+    transition: color 300ms ease-in;
+}
+
+.ii__nav__list-item--selected .ii__nav-item__heading {
     color: rgba(19, 20, 21, 1);
 }
 
@@ -832,16 +852,20 @@ For changing text color on nav item HOVER
 } */
 
 .ii__nav-item__pill {
+    display: inline-block;
     margin-top: 0.85rem;
     width: 2.7rem;
     height: 0.6rem;
     border-radius: 8px;
     background-color: #283fd9;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 200ms ease-out;
 }
 
 .ii__nav__list-item--selected .ii__nav-item__pill {
-    display: inline-block;
+    opacity: 1;
+    visibility: visible;
 }
 
 /* 
@@ -862,6 +886,7 @@ For displaying pill on nav item HOVER
     cursor: pointer;
     border-bottom: 5px solid transparent;
     animation: fadeIn 500ms;
+    transition: all 200ms ease-in;
 }
 
 @keyframes fadeIn {
@@ -925,6 +950,7 @@ For displaying pill on nav item HOVER
     font-size: 1.6rem;
     font-weight: 500;
     color: rgba(21, 21, 21, 0.7);
+    transition: color 300ms ease-out;
     
 }
 
@@ -942,17 +968,22 @@ For displaying pill on nav item HOVER
 
 .ii__card__btn-svg {
     fill: #283fd9;
-    display: none;
+    display: inline;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 200ms ease-in;
 }
 
 .ii__card--selected .ii__card__btn-svg {
-    display: inline;
+    opacity: 1;
+    visibility: visible;
 }
 
 
 /* For displaying arrow in card footer on HOVER */
 .ii__card:hover .ii__card__btn-svg {
-    display: inline;
+    opacity: 1;
+    visibility: visible;
 }
 
 .ii__card__no-blogs {
@@ -988,6 +1019,7 @@ For displaying pill on nav item HOVER
     padding: 10.5rem 8.2rem;
     border-radius: 20px;
     cursor: pointer;
+    transition: all 300ms ease-in;
 }
 
 .wcu__card__heading {

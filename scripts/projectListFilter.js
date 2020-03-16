@@ -18,7 +18,8 @@ try{
     }
 
     const classConfigOfList = {
-        toggleItemClass: 'hidden',
+        toggleItemClassForward: 'hide-slideIn',
+        toggleItemClassBack: 'hide-slideOut',
         disabledPaginationClass: 'disabled-paginator-fixed',
         nextBtnId: 'rp__list-fwd',
         backBtnId: 'rp__list-bck'

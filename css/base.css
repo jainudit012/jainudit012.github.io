@@ -36,7 +36,7 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(-20%,0);
+    transform: translate(-20%,0) !important;
 }
 
 .hide-slideOut {
@@ -45,7 +45,7 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(20%,0);
+    transform: translate(15%,0) !important;
 }
 
 .hide-slideDown {
@@ -57,11 +57,11 @@ html {
     transform: translate(0,-5%);
 }
 
-.pos-behind {
+.slideOut {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    transform: translate(-201%,0) !important;
 }
 
 .block {

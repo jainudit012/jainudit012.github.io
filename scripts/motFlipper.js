@@ -7,7 +7,8 @@ const motClassConfig = {
     nextClass: 'mot__cards--next',
     disabledPaginationClass: 'mot__disabled-paginator',
     nextBtnId: 'mot__card-fwd',
-    backBtnId: 'mot__card-bck'
+    backBtnId: 'mot__card-bck',
+    slideAnimationClass: 'slideOut'
 }
 
 otherPaginate(motFlipperData.items, motClassConfig, null)

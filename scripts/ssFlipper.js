@@ -3,11 +3,12 @@ const flipperData = loadElementsToArray('ss__panel-', wrapper)
 
 const classConfig = {
     frontClass: 'ss__flipper__front',
-    backClass: 'hidden',
-    nextClass: ' ',
+    backClass: '',
+    nextClass: '',
     disabledPaginationClass: 'ss__disabled-paginator',
     nextBtnId: 'ss__panel-fwd',
-    backBtnId: 'ss__panel-bck'
+    backBtnId: 'ss__panel-bck',
+    slideAnimationClass: 'hide-slideOut'
 }
 
 otherPaginate(flipperData.items, classConfig, null)

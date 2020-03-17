@@ -52,6 +52,7 @@ function otherPaginate(dataArray, classConfig, wrapper) {
                 dataArray = e.detail.data
                 addClass(backButton, classConfig.disabledPaginationClass)
                 if(dataArray.length > 1){
+                    removeClass(nextButton, 'hidden')
                     removeClass(nextButton, classConfig.disabledPaginationClass)
                 }else{
                     addClass(nextButton, classConfig.disabledPaginationClass)
@@ -66,15 +67,16 @@ function otherPaginate(dataArray, classConfig, wrapper) {
             const prevListToHide = dataArray.slice((counter - 1), counter)[0]
             const nextSlide = dataArray.slice((counter+1), (counter + 2))[0]
     
-            addClass(prevListToHide, 'pos-behind')
+            addClass(prevListToHide, classConfig.slideAnimationClass)
             removeClass(prevListToHide, classConfig.frontClass)
             removeClass(currListToDisplay, classConfig.backClass)
             removeClass(currListToDisplay, classConfig.nextClass)
             addClass(currListToDisplay, classConfig.frontClass)
             removeClass(backButton, classConfig.disabledPaginationClass)
 
-            if(nextSlide && nextSlide.className.indexOf('pos-behind') === -1) {
+            if(nextSlide && nextSlide.className.indexOf(classConfig.slideAnimationClass) === -1) {
                 addClass(nextSlide, classConfig.nextClass)
+                removeClass(nextSlide, classConfig.backClass)
             }
             if(!nextSlide) {
                 addClass(nextButton, classConfig.disabledPaginationClass)
@@ -89,12 +91,12 @@ function otherPaginate(dataArray, classConfig, wrapper) {
             const nextSlide = dataArray.slice((counter + 1), (counter +2))[0]
             const prevListToHide = dataArray.slice((counter+2), (counter + 3))[0]
 
-            removeClass(currListToDisplay, 'pos-behind')
+            removeClass(currListToDisplay, classConfig.slideAnimationClass)
             addClass(currListToDisplay, classConfig.frontClass)
             removeClass(nextSlide, classConfig.frontClass)
-            addClass(nextSlide, classConfig.backClass)
             addClass(nextSlide, classConfig.nextClass)
             removeClass(prevListToHide, classConfig.nextClass)
+            addClass(prevListToHide, classConfig.backClass)
             removeClass(nextButton, classConfig.disabledPaginationClass)
             removeClass(nextButton, 'hidden')
             if(currListToDisplay.id === dataArray[0].id) addClass(backButton, classConfig.disabledPaginationClass)

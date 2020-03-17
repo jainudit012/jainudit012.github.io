@@ -14,7 +14,8 @@ try{
         nextClass: 'site__info-rp__panels__next',
         disabledPaginationClass: 'disabled-paginator',
         nextBtnId: 'rp__panel-fwd',
-        backBtnId: 'rp__panel-bck'
+        backBtnId: 'rp__panel-bck',
+        slideAnimationClass: 'slideOut'
     }
 
     const classConfigOfList = {
@@ -43,9 +44,9 @@ try{
                 addClassToMultiple(hiddenItems, 'hidden')
                 removeClassFromMultiple(panelData.items, 'site__info-rp__panels__front')
                 removeClassFromMultiple(panelData.items, 'site__info-rp__panels__next')
-                removeClass(filteredItems[0], 'site__info-rp__panels__back')
+                removeClassFromMultiple(filteredItems.slice(0,2), 'site__info-rp__panels__back')
                 addClass(filteredItems[0], 'site__info-rp__panels__front')
-                addClassToMultiple(filteredItems.slice(1), 'site__info-rp__panels__back')
+                addClassToMultiple(filteredItems.slice(2), 'site__info-rp__panels__back')
                 addClass(filteredItems[1], 'site__info-rp__panels__next')
 
                 filteredData = filteredItems

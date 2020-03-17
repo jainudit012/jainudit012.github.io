@@ -54,8 +54,11 @@ function otherPaginate(dataArray, classConfig, wrapper) {
                 if(dataArray.length > 1){
                     removeClass(nextButton, 'hidden')
                     removeClass(nextButton, classConfig.disabledPaginationClass)
-                }else{
+                }else if(dataArray.length === 1){
                     addClass(nextButton, classConfig.disabledPaginationClass)
+                }else {
+                    addClass(nextButton, classConfig.disabledPaginationClass)
+                    addClass(backButton, classConfig.disabledPaginationClass)
                 }
             }, true)
         }

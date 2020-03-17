@@ -30,6 +30,26 @@ html {
     left: 0;
 }
 
+.hide-2x-l {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-101%);
+    /* z-index: -1; */
+}
+
+.hide-2x-r {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(101%);
+    /* z-index: -1; */
+}
+
 .hide-slideIn {
     opacity: 0;
     visibility: hidden;

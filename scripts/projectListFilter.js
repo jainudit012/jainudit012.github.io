@@ -43,14 +43,21 @@ try{
                 removeClassFromMultiple(panelData.items, classConfigOfPanels.frontClass)
                 removeClassFromMultiple(panelData.items, classConfigOfPanels.nextClass)
                 removeClassFromMultiple(panelData.items, classConfigOfPanels.backClass)
-                removeClassFromMultiple(panelData.items, 'hidden')
+                removeClassFromMultiple(panelData.items, 'hide-2x-l')
+                removeClassFromMultiple(panelData.items, 'hide-2x-r')
                 removeClassFromMultiple(panelData.items, classConfigOfPanels.slideAnimationClass)
-
-                addClassToMultiple(hiddenItems, 'hidden')
 
                 addClass(filteredItems[0], classConfigOfPanels.frontClass)
                 addClass(filteredItems[1], classConfigOfPanels.nextClass)
                 addClassToMultiple(filteredItems.slice(2), classConfigOfPanels.backClass)
+
+                let topIndex = panelData.items.indexOf(filteredItems[0])
+
+                hiddenItems.forEach(el => {
+                    panelData.items.indexOf(el) < topIndex || topIndex === -1 ? 
+                    addClassToMultiple(hiddenItems, 'hide-2x-l') : 
+                    addClassToMultiple(hiddenItems, 'hide-2x-r')
+                })
 
                 filteredData = filteredItems
 

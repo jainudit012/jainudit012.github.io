@@ -25,8 +25,8 @@ function filterBlogs(tag, allBlogs){
     removeClassFromMultiple(hiddenBlogs, 'block')
 
     if(filteredBlogs.length === 0) {
-        removeClass(noBlogElement, 'hidden')
-    }else addClass(noBlogElement, 'hidden')
+        removeClass(noBlogElement, 'hide')
+    }else addClass(noBlogElement, 'hide')
 }
  
 try{

@@ -685,6 +685,7 @@
     grid-template-rows: 85% 5% 10%;
     grid-template-columns: 10fr 6rem 6rem 1fr;
     position: relative;
+    overflow-x: hidden;
 }
 
 .ss__flipper-panel {
@@ -693,8 +694,9 @@
     background-color: #151515;
     padding: 0 0 14.8rem 22.6rem;
     border-radius: 0 0 20px 0;
-    transform: translateX(-100%);
-    transition: all 450ms ease-out;
+    transform: translateX(40%);
+    z-index: -1;
+    transition: all 500ms ease-in-out;
 }
 
 .ss__flipper__front {
@@ -888,6 +890,7 @@ For displaying pill on nav item HOVER
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 12.2rem;
     grid-row-gap: 10.25rem;
+    position: relative;
 }
 
 .ii__card {
@@ -1001,6 +1004,8 @@ For displaying pill on nav item HOVER
     font-weight: 900;
     text-align: center;
     margin-top: -3rem;
+    animation: fadeIn 500ms;
+    transition: all 200ms ease-in;
 }
 
 .site__info-wcu {

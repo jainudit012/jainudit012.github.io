@@ -8,7 +8,7 @@ const classConfig = {
     disabledPaginationClass: 'ss__disabled-paginator',
     nextBtnId: 'ss__panel-fwd',
     backBtnId: 'ss__panel-bck',
-    slideAnimationClass: 'hide-slideOut'
+    slideAnimationClass: 'slideOut'
 }
 
 otherPaginate(flipperData.items, classConfig, null)

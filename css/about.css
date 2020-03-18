@@ -1,0 +1,216 @@
+.about__main {
+    padding: 21.9rem 0 0 22.6rem;
+    color: #ffffff;
+    background: linear-gradient(167deg, #09070a 20%, rgba(9, 7, 10, 0.25) 82%), -webkit-image-set( url("../assets/hike.jpg") 1x, url("../assets/hike@2x.jpg") 2x);
+    background-image: linear-gradient(167deg, #09070a 20%, rgba(9, 7, 10, 0.25) 82%) , url("../assets/hike.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about__main-heading {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 3.1rem;
+}
+
+.about__main-text {
+    width: 50%;
+    padding-bottom: 46.8rem;
+    font-size: 2rem;
+    opacity: 0.7;
+}
+
+.about__info {
+    padding: 8.4rem 22.6rem 0 22.6rem;
+    color: #131415;
+}
+
+.about__info__mission-box {
+    display: flex;
+    width: 100%;
+    margin-bottom: 8.2rem;
+    padding-top: 8rem;
+}
+
+.about__info__mission {
+    width: 70%;
+}
+
+.about__info__mission-heading {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 6.9rem;
+}
+
+.about__info__mission-text {
+    opacity: 0.7;
+    font-size: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+.about__info__mission-author {
+    font-size: 2rem;
+    font-family: Lato, sans-serif;
+}
+
+.about__info__mission-quotes {
+    width: 13rem;
+    height: 100%;
+    margin: 5rem 0 0 2rem;
+    transform: rotateZ(180deg);
+}
+
+.about__info--culture {
+    text-align: end;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 6.9rem;
+    padding-top: 6rem;
+}
+
+.about__info--culture-text {
+    text-align: end;
+    margin-left: auto;
+    font-size: 2rem;
+    opacity: 0.7;
+    width: 70%;
+    margin-bottom: 3.5rem;
+}
+
+.about__info__cards-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 14.2rem 10rem 10.2rem 10rem;
+    grid-column-gap: 25rem;
+}
+
+.about__info__card {
+    display: flex;
+    flex-direction: column;
+}
+
+.about__info__card--header {
+    border-radius: 50%;
+    align-self: end;
+    background-color: #F7F7F7;
+    padding: 3rem;
+}
+
+.about__info__card--bold {
+    font-size: 2.5rem;
+    margin-top: 5.3rem;
+}
+
+.about__info__card--text {
+    font-size: 1.6rem;
+    opacity: 0.7;
+    margin-top: 0.9rem;
+}
+
+.about__mot {
+    color: #131415;
+    padding: 6rem 0 16rem 0;
+}
+
+.about__mot--heading {
+    font-size: 5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.about__mot--text {
+    font-family: Lato, sans-serif;
+    font-size: 2rem;
+    opacity: 0.7;
+    text-align: center;
+    margin: 3rem auto;
+    width: 40%;
+}
+
+.about__mot__cards-box {
+    padding: 0 22.6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 8.35rem;
+    grid-row-gap: 8.05rem;
+    margin-top: 10.5rem;
+}
+
+.about__mot__card {
+    grid-row: auto;
+    grid-column: auto;
+    border-bottom: 5px solid rgba(21, 21, 21, 0.2);
+    cursor: pointer;
+}
+
+.about__mot__card:hover {
+    border-bottom: 5px solid rgba(38, 62, 217, 1);
+}
+
+.about__mot__card:hover .mot__card__pill {
+    opacity: 1;
+}
+
+.about__join {
+    color: #131415;
+    padding: 8.2rem 22.6rem 14rem 22.6rem;
+}
+
+.about__join--heading {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+}
+
+.about__join--text {
+    font-family: Lato, sans-serif;
+    font-size: 2rem;
+    width: 70%;
+    opacity: 0.7;
+    margin-bottom: 3rem;
+}
+
+.about__join--btn {
+    background-color: #fff;
+    color: #263ed9;
+    border: 1px solid #263ed9;
+    padding: 2rem 8rem;
+    font-size: 2rem;
+    font-family: Lato, sans-serif;
+    font-weight: bold;
+    border-radius: 9px;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.about__join--info {
+    font-size: 2.5rem;
+    margin: 11.5rem 0 8.1rem 0;
+    font-weight: 400;
+}
+
+.about__join--box {
+    border-bottom: 1px solid rgba(19, 20, 21, 0.4);
+    display: flex;
+    align-items: center;
+    padding: 3.85rem 0;
+}
+
+.about__join--box-info-heading {
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+.about__join--box-info-text {
+    font-family: Lato, sans-serif;
+    font-size: 2rem;
+    opacity: 0.7;
+    font-weight: 400;
+    width: 80%;
+    margin-top: 2.5rem;
+}
+
+.about__join--box__btn-box {
+    margin-left: auto;
+}

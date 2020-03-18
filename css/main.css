@@ -484,28 +484,7 @@
     background-repeat: no-repeat;
 }
 
-#rp__panels-2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.95)), url("../assets/watch.jpg");
-    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.95)), -webkit-image-set(url("../assets/watch.jpg") 1x, url("../assets/watch@2x.jpg") 2x, url("../assets/watch@3x.jpg") 3x);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#rp__panels-3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.95)), url("../assets/watch.jpg");
-    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.95)), -webkit-image-set(url("../assets/watch.jpg") 1x, url("../assets/watch@2x.jpg") 2x, url("../assets/watch@3x.jpg") 3x);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#rp__panels-4 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.95)), url("../assets/watch.jpg");
-    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.95)), -webkit-image-set(url("../assets/watch.jpg") 1x, url("../assets/watch@2x.jpg") 2x, url("../assets/watch@3x.jpg") 3x);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#rp__panels-5 {
+#rp__panels-2, #rp__panels-3, #rp__panels-4, #rp__panels-5, #rp__panels-6, #rp__panels-7, #rp__panels-8, #rp__panels-9, #rp__panels-10, #rp__panels-11 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.95)), url("../assets/watch.jpg");
     background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.95)), -webkit-image-set(url("../assets/watch.jpg") 1x, url("../assets/watch@2x.jpg") 2x, url("../assets/watch@3x.jpg") 3x);
     background-size: cover;

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/blogs.css">
+    <script src="./scripts/utility.js" async defer></script>
+    <script src="./scripts/blogFilter.js" async defer></script>
+    <script src="./scripts/blogPage.js" async defer></script>
+</head>
+<body>
+    <header class="site__header">
+        <nav class="site__nav">
+            <a href="/index.html" class="nav__logo__link"><img src="./assets/logo.png" srcset="./assets/logo.png 1x, ./assets/logo@2x.png 2x" alt="Opscale Logo" class="nav__logo"></a>
+            <ul class="nav__list__wrapper">
+                <li class="nav__list__item" id="wwd__link"><a href="/index.html#wwd__section" class="nav__list__link">What&nbsp;We&nbsp;Do</a></li>
+                <li class="nav__list__item nav__list__item__expand" id="ind__link"><a href="#" class="nav__list__link">Industries</a>
+                    <ul class="nav__list__item__group hide-slideDown" id="ind__group">
+                        <li class="nav__list__item__group__item"><a href="#" class="nav__list__link">Healthcare</a></li>
+                        <li class="nav__list__item__group__item"><a href="#" class="nav__list__link">Finance</a></li>
+                        <li class="nav__list__item__group__item"><a href="#" class="nav__list__link">Media&nbsp;&amp;&nbsp;Entertainment</a></li>
+                        <li class="nav__list__item__group__item"><a href="#" class="nav__list__link">Energy</a></li>
+                        <li class="nav__list__item__group__item"><a href="#" class="nav__list__link">E-Commerce</a></li>
+                    </ul>
+                </li>
+                <li class="nav__list__item nav__list__item__expand"><a href="#" class="nav__list__link" id="ins__link">Insights</a>
+                    <ul class="nav__list__item__group hide-slideDown" id="ins__group">
+                        <li class="nav__list__item__group__item"><a href="#type=pm" class="nav__list__link">Product Management</a></li>
+                        <li class="nav__list__item__group__item"><a href="#type=dev" class="nav__list__link">DevOps &amp; SRE</a></li>
+                        <li class="nav__list__item__group__item"><a href="#type=per" class="nav__list__link">Performance</a></li>
+                        <li class="nav__list__item__group__item"><a href="#type=ux" class="nav__list__link">UX</a></li>
+                        <li class="nav__list__item__group__item"><a href="#type=app" class="nav__list__link">Applications</a></li>
+                        <li class="nav__list__item__group__item"><a href="#type=sta" class="nav__list__link">Startup</a></li>
+                    </ul>
+                </li>
+                <li class="nav__list__item nav__list__item__expand" id="abt__link"><a href="/about.html" class="nav__list__link">About&nbsp;Us</a>
+                    <ul class="nav__list__item__group hide-slideDown" id="abt__group">
+                        <li class="nav__list__item__group__item"><a href="/about.html#about-mission" class="nav__list__link">Why&nbsp;Choose&nbsp;Us</a></li>
+                        <li class="nav__list__item__group__item"><a href="/about.html#meet-team" class="nav__list__link">Meet&nbsp;Our&nbsp;Team</a></li>
+                        <li class="nav__list__item__group__item"><a href="/about.html#careers" class="nav__list__link">Careers</a></li>
+                    </ul>
+                </li>
+                <li class="nav__list__item" id="ctu__link"><a href="#contact" class="nav__list__link">Contact&nbsp;Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="blogs__main">
+        <nav class="blogs__nav">
+            <ul class="blogs__nav__list" id="blogs__list">
+                <li class="blogs__nav__item blogs__nav__item--selected" id="blog__filter-1" data-filterTag="all">
+                    <div class="blogs__nav__item--text">All Posts</div>
+                    <div class="blogs__nav--pill"></div>
+                </li>
+                <li class="blogs__nav__item" id="blog__filter-2" data-filterTag="pm">
+                    <div class="blogs__nav__item--text">Product Management</div>
+                    <div class="blogs__nav--pill"></div>
+                </li>
+                <li class="blogs__nav__item" id="blog__filter-3" data-filterTag="dev">
+                    <div class="blogs__nav__item--text">DevOps &amp; SRE</div>
+                    <div class="blogs__nav--pill"></div>
+                </li>
+                <li class="blogs__nav__item" id="blog__filter-4" data-filterTag="per">
+                    <div class="blogs__nav__item--text">Performance</div>
+                    <div class="blogs__nav--pill"></div>
+                </li>
+                <li class="blogs__nav__item" id="blog__filter-5" data-filterTag="ux">
+                    <div class="blogs__nav__item--text">UX</div>
+                    <div class="blogs__nav--pill"></div>
+                </li>
+                <li class="blogs__nav__item" id="blog__filter-6" data-filterTag="app">
+                    <div class="blogs__nav__item--text">Applications</div>
+                    <div class="blogs__nav--pill"></div>
+                </li>
+                <li class="blogs__nav__item" id="blog__filter-7" data-filterTag="sta">
+                    <div class="blogs__nav__item--text">Startup</div>
+                    <div class="blogs__nav--pill"></div>
+                </li>
+            </ul>
+            <label for="blog-search" class="blogs__nav__search-label" id="blogs__nav__search-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26.304" height="26.806" viewBox="0 0 21.304 21.806" class="blogs__nav__search-icon">
+                    <path id="XMLID_1102_" d="M10.382,2.2a7.736,7.736,0,0,1,7.682,7.756,7.853,7.853,0,0,1-1.635,4.782l7.285,7.384a1.122,1.122,0,0,1,0,1.561,1.07,1.07,0,0,1-.768.322,1.085,1.085,0,0,1-.793-.322L14.867,16.3a7.547,7.547,0,0,1-4.46,1.437A7.769,7.769,0,0,1,10.382,2.2Zm0,13.579a5.8,5.8,0,0,0,0-11.6,5.8,5.8,0,0,0,0,11.6Z" transform="translate(-2.725 -2.2)"/>
+                </svg>
+                <input type="text" class="blogs__nav__search-input hideabs" id="blog-search" placeholder="Search">
+            </label>
+        </nav>
+    </main>
+    <section class="blogs__section">
+        <div class="blogs__wrapper" id="ii__card__box">
+            <div class="ii__card" id="ii__card-1" data-filterTag="pm" data-searchTag="architecting product management architecture startup software">
+                <header class="ii__card__header">
+                    <img src="./assets/laptop.jpg" srcset="./assets/laptop.jpg 1x, ./assets/laptop@2x.jpg 2x ,./assets/laptop@3x.jpg 3x" alt="Laptop" class="ii__card__header-image">
+                </header>
+                <span class="ii__card__read-time">5 min read</span>
+                <h4 class="ii__card__heading">Architecting for software delivery in a startup</h4>
+                <p class="ii__card__text">Most organizations want faster, more-incremental delivery of their applications, but fragile tests and complex continuous delivery pipelines ...</p>
+                <footer class="ii__card__footer">
+                    <div class="ii__card__btn">
+                        <div class="ii__card__btn-text">Read more</div>
+                        <span class="ii__card__btn-svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="1.48rem" viewBox="0 0 33.384 25.521" class="ii__card__btn-svg">
+                                <path id="prefix__Thin_Arrow-7" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                            </svg>
+                        </span>
+                    </div>
+                </footer>
+            </div>
+            <div class="ii__card" id="ii__card-2" data-filterTag="dev" data-searchTag="dev ops sre ship software better faster">
+                <header class="ii__card__header">
+                    <img src="./assets/code_screen.jpg" srcset="./assets/code_screen.jpg 1x, ./assets/code_screen@2x.jpg 2x, ./assets/code_screen@3x.jpg 3x" alt="code screen" class="ii__card__header-image">
+                </header>
+                <span class="ii__card__read-time">5 min read</span>
+                <h4 class="ii__card__heading">Ship better software faster</h4>
+                <p class="ii__card__text">Not far in the past, containers were generally understood only by those equipped with a deep knowledge of the Linux kernel, or by those working at some...</p>
+                <footer class="ii__card__footer">
+                    <div class="ii__card__btn">
+                        <div class="ii__card__btn-text">Read more</div>
+                        <span class="ii__card__btn-svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="1.48rem" viewBox="0 0 33.384 25.521" class="ii__card__btn-svg">
+                                <path id="prefix__Thin_Arrow-8" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                            </svg>
+                        </span>
+                    </div>
+                </footer>
+            </div>
+            <div class="ii__card" id="ii__card-3" data-filterTag="per" data-searchTag="performance high startup">
+                <header class="ii__card__header">
+                    <img src="./assets/phone_wh.jpg" srcset="./assets/phone_wh.jpg 1x, ./assets/phone_wh@2x.jpg 2x, ./assets/phone_wh@3x.jpg 3x" alt="phone" class="ii__card__header-image">
+                </header>
+                <span class="ii__card__read-time">5 min read</span>
+                <h4 class="ii__card__heading">High-performing startups</h4>
+                <p class="ii__card__text">Do you want to be the next Google? or Netflix? or Amazon?What all these high-performing organizations have in common is that they all leverage...</p>
+                <footer class="ii__card__footer">
+                    <div class="ii__card__btn">
+                        <div class="ii__card__btn-text">Read more</div>
+                        <span class="ii__card__btn-svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="1.48rem" viewBox="0 0 33.384 25.521" class="ii__card__btn-svg">
+                                <path id="prefix__Thin_Arrow-9" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                            </svg>
+                        </span>
+                    </div>
+                </footer>
+            </div>
+            <div class="ii__card" id="ii__card-4" data-filterTag="sta" data-searchTag="startup software opeartion">
+                <header class="ii__card__header">
+                    <img src="./assets/work.jpg" srcset="./assets/work.jpg 1x, ./assets/work@2x.jpg 2x, ./assets/work@3x.jpg 3x" alt="work" class="ii__card__header-image">
+                </header>
+                <span class="ii__card__read-time">5 min read</span>
+                <h4 class="ii__card__heading">Software operation is hard</h4>
+                <p class="ii__card__text">Running operations for a software company is hard. There are so many failure modes because of so many moving parts. How to build the code right and fast?...</p>
+                <footer class="ii__card__footer">
+                    <div class="ii__card__btn">
+                        <div class="ii__card__btn-text">Read more</div>
+                        <span class="ii__card__btn-svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="1.48rem" viewBox="0 0 33.384 25.521" class="ii__card__btn-svg">
+                                <path id="prefix__Thin_Arrow-10" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                            </svg>
+                        </span>
+                    </div>
+                </footer>
+            </div>
+            <div class="ii__card" id="ii__card-5" data-filterTag="sta" data-searchTag="startup git setting up repository">
+                <header class="ii__card__header">
+                    <img src="./assets/phone_ha.jpg" srcset="./assets/phone_ha.jpg 1x, ./assets/phone_ha@2x.jpg 2x, ./assets/phone_ha@3x.jpg 3x" alt="phone" class="ii__card__header-image">
+                </header>
+                <span class="ii__card__read-time">5 min read</span>
+                <h4 class="ii__card__heading">Setting Git repository team access</h4>
+                <p class="ii__card__text">One of the things you will want to get right when setting up a new software project is your code base write permissions. This post will hopefully give you...</p>
+                <footer class="ii__card__footer">
+                    <div class="ii__card__btn">
+                        <div class="ii__card__btn-text">Read more</div>
+                        <span class="ii__card__btn-svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="1.48rem" viewBox="0 0 33.384 25.521" class="ii__card__btn-svg">
+                                <path id="prefix__Thin_Arrow-11" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                            </svg>
+                        </span>
+                    </div>
+                </footer>
+            </div>
+            <div class="ii__card" id="ii__card-6" data-filterTag="ux" data-searchTag="ux link everything">
+                <header class="ii__card__header">
+                    <img src="./assets/strings.jpg" srcset="./assets/strings.jpg 1x, ./assets/strings@2x.jpg 2x" alt="board" class="ii__card__header-image">
+                </header>
+                <span class="ii__card__read-time">5 min read</span>
+                <h4 class="ii__card__heading">Evrything is Linked</h4>
+                <p class="ii__card__text">One of the things you will want to get right when setting up a new project your structure of presentation. This post will hopefully give you...</p>
+                <footer class="ii__card__footer">
+                    <div class="ii__card__btn">
+                        <div class="ii__card__btn-text">Read more</div>
+                        <span class="ii__card__btn-svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="1.48rem" viewBox="0 0 33.384 25.521" class="ii__card__btn-svg">
+                                <path id="prefix__Thin_Arrow-12" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                            </svg>
+                        </span>
+                    </div>
+                </footer>
+            </div>
+            <div class="ii__card" id="ii__card-7" data-filterTag="sta" data-searchTag="sharing debating startup">
+                <header class="ii__card__header">
+                    <img src="./assets/group.jpg" srcset="./assets/group.jpg 1x, ./assets/group@2x.jpg 2x" alt="group" class="ii__card__header-image">
+                </header>
+                <span class="ii__card__read-time">5 min read</span>
+                <h4 class="ii__card__heading">Sharing and Deabating</h4>
+                <p class="ii__card__text">One of the things you will want to get right when setting up a new project is the right team. This post will hopefully give you...</p>
+                <footer class="ii__card__footer">
+                    <div class="ii__card__btn">
+                        <div class="ii__card__btn-text">Read more</div>
+                        <span class="ii__card__btn-svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="1.48rem" viewBox="0 0 33.384 25.521" class="ii__card__btn-svg">
+                                <path id="prefix__Thin_Arrow-13" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                            </svg>
+                        </span>
+                    </div>
+                </footer>
+            </div>
+            <div class="ii__card" id="ii__card-8" data-filterTag="app" data-searchTag="application new idea thinking">
+                <header class="ii__card__header">
+                    <img src="./assets/phone_app.jpg" srcset="./assets/phone_app.jpg 1x, ./assets/phone_app@2x.jpg 2x" alt="phone" class="ii__card__header-image">
+                </header>
+                <span class="ii__card__read-time">5 min read</span>
+                <h4 class="ii__card__heading">Thinking of a new Idea</h4>
+                <p class="ii__card__text">Many people have ideas but only some of them try on it and hardly some get the support they deserve. This post will hopefully give you...</p>
+                <footer class="ii__card__footer">
+                    <div class="ii__card__btn">
+                        <div class="ii__card__btn-text">Read more</div>
+                        <span class="ii__card__btn-svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="1.48rem" viewBox="0 0 33.384 25.521" class="ii__card__btn-svg">
+                                <path id="prefix__Thin_Arrow-14" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                            </svg>
+                        </span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <p class="ii__card__no-blogs hide" id="no__blogs">No Blogs!</p>
+    </section>
+    <div class="site__footer-section" id="contact">
+        <div class="footer__company__contacts">
+            <div class="footer__company__contacts__img-box">
+                <img src="./assets/logo.png" srcset="./assets/logo.png 1x, ./assets/logo@2x.png 2x" alt="Opscale Logo" class="footer__company__contacts__img">
+            </div>
+            <ul class="footer__company__contacts__list">
+                <li class="footer__company__contacts__list-item">
+                    <span class="company__contacts__svg-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="22" viewBox="0 0 13 22" class="company__contacts__svg">
+                            <path id="prefix__cellphone-iphone_1_" d="M16 18H7V4h9m-4.5 18a1.5 1.5 0 111.5-1.5 1.5 1.5 0 01-1.5 1.5m4-21h-8A2.5 2.5 0 005 3.5v17A2.5 2.5 0 007.5 23h8a2.5 2.5 0 002.5-2.5v-17A2.5 2.5 0 0015.5 1z" data-name="cellphone-iphone (1)" transform="translate(-5 -1)" style="fill:#fff;opacity:.801"/>
+                        </svg>
+                    </span>
+                    <span class="company__contacts__info">+91 7760830496</span>
+                </li>
+                <li class="footer__company__contacts__list-item">
+                    <span class="company__contacts__svg-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" class="company__contacts__svg">
+                            <path id="prefix__email" d="M20 8l-8 5-8-5V6l8 5 8-5m0-2H4a1.993 1.993 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2z" transform="translate(-2 -4)" style="fill:#fff;opacity:.801"/>
+                        </svg>
+                    </span>
+                    <span class="company__contacts__info">support@opscale.io</span>
+                </li>
+                <li class="footer__company__contacts__list-item">
+                    <span class="company__contacts__svg-box company__contacts__svg-box-offset">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="20" viewBox="0 0 14 20" class="company__contacts__svg">
+                            <path id="prefix__map-marker" d="M12 11.5A2.5 2.5 0 1114.5 9a2.5 2.5 0 01-2.5 2.5M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z" transform="translate(-5 -2)" style="fill:#fff;opacity:.801"/>
+                        </svg>
+                    </span>
+                    <span class="company__contacts__info">Opscale, Indiqube, Tower-D Ground Floor, Subramanya Arcade, Bannerghatta Main Rd, OLd Gurappanapalya, BTM Layout, Bengaluru, Karnataka 560029</span>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__site-sections__links__wrapper">
+            <ul class="footer__site-sections__container">
+                <li class="footer__site-sections__item"><a href="#" class="footer__site-sections__links sections__links__highlighted">What we do</a></li>
+                <li class="footer__site-sections__item"><a href="#" class="footer__site-sections__links">Projects</a></li>
+                <li class="footer__site-sections__item"><a href="#" class="footer__site-sections__links">How we work</a></li>
+                <li class="footer__site-sections__item"><a href="#" class="footer__site-sections__links">Success Stories</a></li>
+            </ul>
+            <ul class="footer__site-sections__container">
+                <li class="footer__site-sections__item"><a href="#" class="footer__site-sections__links sections__links__highlighted">Industries</a></li>
+                <li class="footer__site-sections__item"><a href="#" class="footer__site-sections__links">Travel</a></li>
+                <li class="footer__site-sections__item"><a href="#" class="footer__site-sections__links">Energy</a></li>
+                <li class="footer__site-sections__item"><a href="#" class="footer__site-sections__links">Oil &amp; Gas</a></li>
+                <li class="footer__site-sections__item"><a href="#" class="footer__site-sections__links">Articificial Intelligence</a></li>
+                <li class="footer__site-sections__item"><a href="#" class="footer__site-sections__links">Agri-Tech</a></li>
+                <li class="footer__site-sections__item"><a href="#" class="footer__site-sections__links">E-Commerce</a></li>
+                <li class="footer__site-sections__item"><a href="#" class="footer__site-sections__links">Media &amp; Entertainment</a></li>
+                <li class="footer__site-sections__item"><a href="#" class="footer__site-sections__links">Healthcare</a></li>
+            </ul>
+            <ul class="footer__site-sections__container">
+                <li class="footer__site-sections__item"><a href="#" class="footer__site-sections__links sections__links__highlighted">Insights</a></li>
+                <li class="footer__site-sections__item"><a href="#type=pm" class="footer__site-sections__links">Product Management</a></li>
+                <li class="footer__site-sections__item"><a href="#type=dev" class="footer__site-sections__links">DevOps &amp; SRE</a></li>
+                <li class="footer__site-sections__item"><a href="#type=per" class="footer__site-sections__links">Performance</a></li>
+                <li class="footer__site-sections__item"><a href="#type=ux" class="footer__site-sections__links">UX</a></li>
+                <li class="footer__site-sections__item"><a href="#type=app" class="footer__site-sections__links">Applications</a></li>
+                <li class="footer__site-sections__item"><a href="#type=sta" class="footer__site-sections__links">Startup</a></li>
+            </ul>
+            <ul class="footer__site-sections__container">
+                <li class="footer__site-sections__item"><a href="/about.html" class="footer__site-sections__links sections__links__highlighted">About Us</a></li>
+                <li class="footer__site-sections__item"><a href="/about.html#about-mission" class="footer__site-sections__links">Why choose us</a></li>
+                <li class="footer__site-sections__item"><a href="/about.html#about-mission" class="footer__site-sections__links">Our Mission</a></li>
+                <li class="footer__site-sections__item"><a href="/about.html#about-culture" class="footer__site-sections__links">Our Culture</a></li>
+                <li class="footer__site-sections__item"><a href="/about.html#meet-team" class="footer__site-sections__links">Meet the team</a></li>
+                <li class="footer__site-sections__item"><a href="/about.html#careers" class="footer__site-sections__links">Careers</a></li>
+            </ul>
+            <ul class="footer__site-sections__container footer__site-sections__container-social">
+                <li class="footer__site-sections__item"><a href="#" class="footer__site-sections__links sections__links__highlighted">Contact Us</a></li>
+                <li class="footer__site-sections__item contact__footer--box">
+                    <a href="#" class="footer__site-sections__links">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="3.2rem" height="3.2rem" viewBox="0 0 32 32" class="contact__footer--icon">
+                            <title>facebook</title>
+                            <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__site-sections__item contact__footer--box">
+                    <a href="#" class="footer__site-sections__links">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="contact__footer--icon">
+                            <title>linkedin</title>
+                            <path d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"></path>
+                            <path d="M2 12h6v18h-6v-18z"></path>
+                            <path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__site-sections__item contact__footer--box">
+                    <a href="#" class="footer__site-sections__links">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="3.2rem" height="3.2rem" viewBox="0 0 32 32" class="contact__footer--icon">
+                            <title>twitter</title>
+                            <path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__site-sections__item contact__footer--box">
+                    <a href="#" class="footer__site-sections__links">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="3.2rem" height="3.2rem" viewBox="0 0 32 32" class="contact__footer--icon">
+                            <title>github</title>
+                            <path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer class="footer__copyright">
+        <p class="footer__copyright__text">&copy; 2020 OPSCALE TECHNOLOGIES (OPC) PRIVATE LIMITED, INDIA</p>
+    </footer>
+</body>
+</html>

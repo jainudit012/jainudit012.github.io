@@ -30,6 +30,12 @@ html {
     left: 0;
 }
 
+.invisible {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 .hide-2x-l {
     opacity: 0;
     visibility: hidden;

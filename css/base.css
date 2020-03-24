@@ -16,7 +16,7 @@ html {
 .hideabs {
     opacity: 0;
     visibility: hidden;
-    position: absolute;
+    position: absolute !important;
     top: 0;
     left: 0;
     transform: translateY(25%);
@@ -25,7 +25,7 @@ html {
 .hide {
     opacity: 0;
     visibility: hidden;
-    position: absolute;
+    position: absolute !important;
     top: 0;
     left: 0;
 }

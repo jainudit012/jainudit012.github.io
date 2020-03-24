@@ -102,6 +102,8 @@ try{
     }
 
     function loadBlog(query){
+        observer.observe(observerTarget)
+
         removeClassFromMultiple(allBlogData.items, 'hidden')
 
         removeClass(floatingIcon , 'invisible')

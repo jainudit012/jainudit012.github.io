@@ -48,8 +48,30 @@ function filterBlogs(tag, allBlogs, tagDataSetKeyName){
     }else addClass(noBlogElement, 'hide')
 }
 
+
+let observerOptions = {
+    root: null,
+    rootMargin: '100px',
+    threshold: 0.1
+}
+
+
+let observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        console.log(entry)
+        if(entry.isIntersecting){
+            addClass(floatingIcon, 'invisible')
+        }else removeClass(floatingIcon, 'invisible')
+    });
+};
+
+let observerTarget = document.getElementById('contact');
+let observer
+
 try{
     const allBlogData = loadElementsToArray('ii__card-', blogWrapper)
+
+    observer = new IntersectionObserver(observerCallback, observerOptions);
 
     let blogArticleData
     if(config.page === 'blogs') {
@@ -84,6 +106,8 @@ try{
                         addClass(blog, 'hidden')
                     })
                 }
+
+                observer.unobserve(observerTarget)
 
                 window.history.replaceState(null, '', `?type=${filterTab.dataset.filtertag}`)
             }

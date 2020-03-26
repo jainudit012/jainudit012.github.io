@@ -7,7 +7,7 @@ try{
         const projectQuery = loadFromQuery()
 
         if(projectDetailData.valid){
-            toggleClassOnDataSelect(projectDetailData.items, 'project', projectQuery['projNo'], 'block')
+            toggleClassOnDataSelect(projectDetailData.items, 'projectnumber', projectQuery['projNo'], 'block')
         }
     }
     

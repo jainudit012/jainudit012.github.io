@@ -58,7 +58,6 @@ let observerOptions = {
 
 let observerCallback = (entries, observer) => {
     entries.forEach(entry => {
-        console.log(entry)
         if(entry.isIntersecting){
             addClass(floatingIcon, 'invisible')
         }else removeClass(floatingIcon, 'invisible')

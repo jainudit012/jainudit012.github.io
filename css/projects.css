@@ -1,3 +1,74 @@
 .project__section {
     display: none;
+    color: #151515;
+}
+
+.project__mast__wrapper {
+    padding: 22.7rem 0 24rem 22.6rem;
+    color: #fff;
+}
+
+#project-1 .project__mast__wrapper {
+    background-image: linear-gradient(90deg, rgba(9, 7, 10, 0.9) 38%, rgba(224, 228, 238, 0.1) 80%), url('../assets/phone__background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.project__name__box {
+    display: flex;
+    flex-direction: column;
+}
+
+.project__client-name {
+    font-size: 3rem;
+}
+
+.project__industry-name {
+    opacity: 0.6;
+    font-size: 2.5rem;
+}
+
+.project__name-pill {
+    width: 3.1rem;
+    height: 0.6rem;
+    border-radius: 8px;
+    background-color: #283fd9;
+}
+
+.project__info-detail {
+    margin: 7.05rem 0 4.6rem 0;
+    font-size: 3rem;
+    font-weight: bold;
+    width: 30%
+}
+
+.project__background-wrapper {
+    padding: 13.5rem 22.6rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.project__background-heading {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 4.3rem;
+
+}
+
+.project__background-text {
+    font-family: Lato, sans-serif;
+    font-size: 2rem;
+    opacity: 0.8;
+    font-weight: 700;
+}
+
+.project__background-img-box {
+    margin-left: 20.2rem;
+}
+
+.project__background-img {
+    width: 55rem;
+    height: 55rem;
 }

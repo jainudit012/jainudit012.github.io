@@ -551,8 +551,10 @@
 }
 
 .site__info-rp__panels__description-btn {
+    display: inline-block;
     cursor: pointer;
     color: #ffffff;
+    text-decoration: none;
     border: 1px solid #fff;
     border-radius: 5px;
     padding: 1.5rem 4rem;

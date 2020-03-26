@@ -14,89 +14,24 @@ try{
         }
     }
 
-    function changeHashToQuery(){
-        const blogHash = window.location.hash
-        let blogType = 'all'
-        if(blogHash.indexOf('type') > -1){
-            blogType = blogHash.split('type=')[1]
-            window.history.replaceState(null, '', `?type=${blogHash.replace('#type=', '')}`)
-        }
-        else{
-            window.history.replaceState(null, '', '?type=all')
-        }
+    function loadBlogsFromHashChange(){
+        changeHashToQuery('type', 'all')
         loadBlogsFromQuery()
     }
  
     function loadBlogsFromQuery(){
-        const blogQuery = window.location.search
+        const blogQuery = loadFromQuery()
 
-        window.scrollTo(0 , 0)
-
-        if(blogQuery.indexOf('tab') !== -1){
-            let queries = {}
-            blogQuery.replace('?', '').split('&').forEach(query => {
-                queries[query.split('=')[0]] = query.split('=')[1]
-            })
-            loadBlog(queries)
-        }else{
+        if(blogQuery['tab']) {
+            loadBlog(blogQuery)
+        }else {
             addClass(blogArticlesWrapper, 'hidden')
-
-            switch (blogQuery){
-                case '?type=pm': {
-                    filterBlogs('pm', allBlogData.items, 'filtertag')
-                    blogFilterTabData.forEach(tab => {
-                        if(tab.dataset.filtertag === 'pm') addClass(tab, 'blogs__nav__item--selected')
-                        else removeClass(tab, 'blogs__nav__item--selected')
-                    })
-                    break
-                }
-                case '?type=dev': {
-                    filterBlogs('dev', allBlogData.items, 'filtertag')
-                    blogFilterTabData.forEach(tab => {
-                        if(tab.dataset.filtertag === 'dev') addClass(tab, 'blogs__nav__item--selected')
-                        else removeClass(tab, 'blogs__nav__item--selected')
-                    })
-                    break
-                }
-                case '?type=per': {
-                    filterBlogs('per', allBlogData.items, 'filtertag')
-                    blogFilterTabData.forEach(tab => {
-                        if(tab.dataset.filtertag === 'per') addClass(tab, 'blogs__nav__item--selected')
-                        else removeClass(tab, 'blogs__nav__item--selected')
-                    })
-                    break
-                }
-                case '?type=ux': {
-                    filterBlogs('ux', allBlogData.items, 'filtertag')
-                    blogFilterTabData.forEach(tab => {
-                        if(tab.dataset.filtertag === 'ux') addClass(tab, 'blogs__nav__item--selected')
-                        else removeClass(tab, 'blogs__nav__item--selected')
-                    })
-                    break
-                }
-                case '?type=app': {
-                    filterBlogs('app', allBlogData.items, 'filtertag')
-                    blogFilterTabData.forEach(tab => {
-                        if(tab.dataset.filtertag === 'app') addClass(tab, 'blogs__nav__item--selected')
-                        else removeClass(tab, 'blogs__nav__item--selected')
-                    })
-                    break
-                }
-                case '?type=sta': {
-                    filterBlogs('sta', allBlogData.items, 'filtertag')
-                    blogFilterTabData.forEach(tab => {
-                        if(tab.dataset.filtertag === 'sta') addClass(tab, 'blogs__nav__item--selected')
-                        else removeClass(tab, 'blogs__nav__item--selected')
-                    })
-                    break
-                }
-                default: {
-                    filterBlogs('all', allBlogData.items, 'filtertag') 
-                    blogFilterTabData.forEach(tab => {
-                        if(tab.dataset.filtertag === 'all') addClass(tab, 'blogs__nav__item--selected')
-                        else removeClass(tab, 'blogs__nav__item--selected')
-                    })
-                }
+            if(blogQuery['type']){
+                filterBlogs(blogQuery['type'], allBlogData.items, 'filtertag')
+                toggleClassOnDataSelect(blogFilterTabData, 'filtertag', blogQuery['type'], 'blogs__nav__item--selected')
+            }else {
+                filterBlogs('all', allBlogData.items, 'filtertag')
+                toggleClassOnDataSelect(blogFilterTabData, 'filtertag', 'all', 'blogs__nav__item--selected')
             }
         }
     }
@@ -118,12 +53,9 @@ try{
 
         removeClass(blogArticlesWrapper, 'hidden')
         addClass(blogArticlesWrapper, 'block')
-        
-        blogFilterTabData.forEach(tab => {
-            if(tab.dataset.filtertag === query.tab) addClass(tab, 'blogs__nav__item--selected')
-            else removeClass(tab, 'blogs__nav__item--selected')
-        })
 
+        toggleClassOnDataSelect(blogFilterTabData, 'filtertag', query.tab, 'blogs__nav__item--selected')
+ 
         if(blogArticleData.valid){
             blogArticleData.items.forEach(article => {
                 if(article.id.indexOf(query.selected) !== -1){
@@ -135,7 +67,7 @@ try{
 
     loadBlogsFromQuery()
 
-    window.addEventListener('hashchange', changeHashToQuery)
+    window.addEventListener('hashchange', loadBlogsFromHashChange)
 
     const searchInputLabel = document.getElementById('blogs__nav__search-label')
 
@@ -155,10 +87,7 @@ try{
         if (event.keyCode === 13 || event.keyCode === 27) {
             e.preventDefault()
             if (event.keyCode === 13) {
-                blogFilterTabData.forEach(tab => {
-                    if(tab.dataset.filtertag === 'all') addClass(tab, 'blogs__nav__item--selected')
-                    else removeClass(tab, 'blogs__nav__item--selected')
-                })
+                toggleClassOnDataSelect(blogFilterTabData, 'filtertag', 'all', 'blogs__nav__item--selected')
                 filterBlogs(searchInputLabel.children[1].value, allBlogData.items, 'searchtag')
             }
             searchInputLabel.children[1].value = '' 

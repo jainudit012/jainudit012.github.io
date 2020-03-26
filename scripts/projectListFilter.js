@@ -1,7 +1,7 @@
 const maxFilterItemsInList = 5
 const listWrapper = document.getElementById('rp__list')
 const panelsWrapper = document.getElementById('rp__panels__wrapper')
-const sectionWrapper = document.getElementById('rp__section')
+const sectionWrapper = document.getElementById('projects')
 
 try{
     const filterItemData = loadElementsToArray('rp__filter-', listWrapper)

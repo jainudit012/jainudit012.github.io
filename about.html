@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/about.css">
+    <script src="./scripts/utility.js" defer></script>
+    <script src="./scripts/floatingIcon.js" defer></script>
 </head>
 <body>
     <header class="site__header">
@@ -47,7 +49,7 @@
         </ul>
       </nav>
     </header>
-    <main class="about__main">
+    <main class="about__main" id="about__main">
         <h1 class="about__main-heading">Be Part of Our Success</h1>
         <p class="about__main-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley </p>
     </main>
@@ -699,10 +701,10 @@
           <textarea class="tod__textarea" name="subject" id="subject" cols="30" rows="5" placeholder="Subject" aria-label="subject"></textarea>
           <button class="tod__form__btn" type="button" id="tod__btn">Submit</button>
       </form>
-      <div class="tod__floating-icon" id="floating__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30.822" height="30.822" viewBox="0 0 30.822 30.822" class="tod__floating-icon-svg">
-              <path id="prefix__XMLID_933_" d="M50.322 35.2a2.606 2.606 0 01-2.622 2.619H37.237V47.7a2.617 2.617 0 01-5.237 0v-9.881h-9.883a2.617 2.617 0 010-5.234H32V22.117a2.617 2.617 0 015.234 0v10.468H47.7a2.606 2.606 0 012.622 2.615z" transform="translate(-19.5 -19.5)"/>
-          </svg>
+      <div class="floating-icon invisible" id="floating__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30.822" height="30.822" viewBox="0 0 30.822 30.822" class="floating-icon-svg">
+            <path id="prefix__XMLID_933_" d="M50.322 35.2a2.606 2.606 0 01-2.622 2.619H37.237V47.7a2.617 2.617 0 01-5.237 0v-9.881h-9.883a2.617 2.617 0 010-5.234H32V22.117a2.617 2.617 0 015.234 0v10.468H47.7a2.606 2.606 0 012.622 2.615z" transform="translate(-19.5 -19.5)"/>
+        </svg>
       </div>
     </section>
     <div class="site__footer-section" id="contact">

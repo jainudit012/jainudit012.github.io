@@ -320,22 +320,6 @@ div.blog__content::after {
     margin: 3rem 2rem;
 }
 
-.floating-icon {
-    position: fixed;
-    z-index: 1;
-    top: 80%;
-    right: 10%;
-    background-color: #283FD9;
-    padding: 3rem;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 200ms ease-in;
-}
-
-.floating-icon-svg {
-    fill: #fff;
-}
-
 .blog__comments-header {
     display: flex;
     margin-top: 17.5rem;

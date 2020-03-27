@@ -1340,17 +1340,20 @@ For displaying pill on nav item HOVER
     cursor: pointer;
 }
 
-.tod__floating-icon {
-    position: absolute;
+
+.floating-icon {
+    position: fixed;
+    z-index: 5;
     top: 80%;
     right: 10%;
     background-color: #283FD9;
     padding: 3rem;
     border-radius: 50%;
     cursor: pointer;
+    transition: all 200ms ease-in;
 }
 
-.tod__floating-icon-svg {
+.floating-icon-svg {
     fill: #fff;
 }
 

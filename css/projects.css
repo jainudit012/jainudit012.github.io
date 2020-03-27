@@ -72,3 +72,379 @@
     width: 55rem;
     height: 55rem;
 }
+
+.project__challenges-wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 6.5rem 22.6rem;
+}
+
+.project__challenges-heading {
+    width: 100%;
+    font-size: 5rem;
+    margin-bottom: 4.3rem;
+}
+
+.project__challenges-text {
+    width: 45%;
+    opacity: 0.8;
+    font-family: Lato, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.project__challenges-list-wrapper {
+    width: 45%;
+    font-size: 3rem;
+}
+
+.project__challenges-list-number {
+    opacity: 0.4;
+    font-weight: bold;
+}
+
+.project__challenges-list-text {
+    font-family: Lato, sans-serif;
+}
+
+.project__approach-wrapper {
+    padding: 20rem 22.6rem 13.7rem 22.6rem;
+}
+
+.project__approach-heading {
+    font-size: 5rem;
+    margin-bottom: 12.7rem;
+}
+
+.project__approach__cards-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 25rem;
+}
+
+.project__approach__info__card {
+    display: flex;
+    flex-direction: column;
+}
+
+.project__approach__info__card--header {
+    border-radius: 50%;
+    align-self: end;
+    background-color: #F7F7F7;
+    padding: 3rem;
+}
+
+.project__approach__info__card--bold {
+    font-size: 2.5rem;
+    margin-top: 5.3rem;
+}
+
+.project__approach__info__card--text {
+    font-size: 1.6rem;
+    opacity: 0.7;
+    margin-top: 0.9rem;
+}
+
+.project__solution-wrapper {
+    padding: 0 22.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.project__solution-info {
+    width: 47%;
+}
+
+.project__solution-img-box {
+    width: 47%;
+}
+
+.project__solution-heading {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 4.3rem;
+}
+
+.project__solution-text {
+    font-family: Lato, sans-serif;
+    font-size: 2rem;
+    opacity: 0.8;
+    margin-bottom: 1.9rem;
+}
+
+.project__solution-img {
+    width: 100%;
+    height: 100%;
+}
+
+.project__technology-wrapper {
+    padding: 4.7rem 22.6rem;
+}
+
+.project__technology-heading {
+    font-size: 2.5rem;
+    margin-bottom: 3.4rem;
+}
+
+.project__technology-img-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project__technology__stories {
+    margin-top: 4rem;
+}
+
+.project__technology__stories-header {
+    padding: 0 18.3rem;
+    position: relative;
+}
+
+.project__technology__stories-header-img {
+    width: 100%;
+    height: 100%;
+}
+
+.project__technology__stories-paginator-wrapper {
+    position: absolute;
+    bottom: 5px;
+    right: 20%;
+    display: flex;
+}
+
+.paginator__box {
+    width: 6rem;
+    background-color: #283FD9;
+    padding: 1.2rem 1.2rem 0.6rem 1.2rem;
+    cursor: pointer;
+}
+
+.paginator__box-left {
+    border-radius: 5px 0 0 5px;
+}
+
+.paginator__box-right {
+    border-radius: 0 5px 5px 0;
+}
+
+.paginator__arrow {
+    fill: #fff;
+}
+
+.projects-disabled-paginator {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    pointer-events: none !important;
+}
+
+.project__technology__stories-info-wrapper {
+    padding: 15rem 25rem;
+}
+
+.project__technology__stories-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.project__technology__stories-author {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding-left: 5rem;
+}
+
+.project__technology__stories-author-img-box {
+    width: 29.2rem;
+    height: 29.2rem;
+    border-radius: 50%;
+    margin-bottom: 3.4rem;
+}
+
+.project__technology__stories-author-img {
+    width: 100%;
+    height: 100%;
+}
+
+.project__technology__stories-author-name {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.project__technology__stories-author-details {
+    font-family: Lato, sans-serif;
+    font-size: 1.6rem;
+    opacity: 0.7;
+}
+
+.project__technology__stories-text-wrapper {
+    width: 50%;
+    display: flex;
+}
+
+.project__technology__stories-text-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+.author__quote_img {
+    height: 100%;
+    transform: rotateZ(180deg) translateY(50%);
+}
+
+.project__technology__stories-text-info {
+    font-family: Lato, sans-serif;
+    font-size: 2rem;
+}
+
+.project__explore {
+    padding: 7.6rem 41rem;
+    color: #151515
+}
+
+.project__explore-heading {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.project__explore-links-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.project__explore-links {
+    padding: 1.3rem 2.4rem;
+    font-family: Lato, sans-serif;
+    font-size: 1.4rem;
+    opacity: 0.3;
+    border: 1px solid rgba(21, 21, 21, 1);
+    border-radius: 10px;
+    color: #131415;
+    width: 18rem;
+    margin: 3rem 1rem 0 0;
+    text-align: center;
+}
+
+.project__cards__section {
+    display: grid;
+    padding: 0 15.5rem 20rem 22.6rem;
+    grid-template-columns: 1fr 6rem 6rem;
+    grid-template-rows: 3fr 5rem 1fr;
+}
+
+.project__cards-paginator-wrapper {
+    grid-column: 2/-1;
+    grid-row: 2/3;
+    display: flex;
+}
+
+.project__cards__wrapper {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-rows: 1fr;
+    overflow-x: hidden;
+    align-items: center;
+    grid-row: 1/-1;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 12.2rem;
+}
+
+.project__card {
+    grid-row: 1/-1;
+    cursor: pointer;
+    padding-bottom: 3rem;
+}
+
+.project__card-header-img {
+    width: 42rem;
+    height: 36.5rem;
+    border-radius: 10px 10px 0 0;
+}
+
+.project__card-body {
+    color: #151515;
+}
+
+.project__card-info {
+    display: flex;
+    align-items: center;
+}
+
+.project__card-info-box {
+    display: inline-block;
+}
+
+.project__card-info-num {
+    font-size: 5rem;
+    opacity: 0.4;
+    font-weight: bold;
+    margin-right: 2rem;
+}
+
+.project__card-info-client {
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.project__card-info-industry {
+    font-size: 1.5rem;
+    opacity: 0.5;
+}
+
+.project__card-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 4.5rem;
+}
+
+.project__card-text {
+    margin-top: 1rem;
+    font-family: Lato, sans-serif;
+    font-size: 1.5rem;
+}
+
+.project__card-footer {
+    margin-top: 1.5rem;
+}
+
+.project__card-btn {
+    display: flex;
+    align-items: flex-end;
+}
+
+.project__card-btn-text {
+    font-size: 1.6rem;
+    opacity: 0.6;
+    transition: all 300ms ease-out;
+}
+
+.project__card-btn-svg {
+    visibility: hidden;
+    opacity: 0;
+    fill: #283FD9;
+    transition: all 300ms ease-in;
+}
+
+.project__card:hover .project__card-btn-text {
+    color: #283FD9;
+    font-weight: bold;
+}
+
+.project__card:hover .project__card-btn-svg {
+    visibility: visible;
+    opacity: 1;
+}
+
+.project__card:hover {
+    padding-bottom: 2.5rem;
+    border-bottom: 0.5rem solid #283FD9;
+}

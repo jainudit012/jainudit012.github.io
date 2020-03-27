@@ -337,7 +337,7 @@
     display: grid;
     padding: 0 15.5rem 20rem 22.6rem;
     grid-template-columns: 1fr 6rem 6rem;
-    grid-template-rows: 3fr 5rem 1fr;
+    grid-template-rows: 29rem 5rem 1fr;
 }
 
 .project__cards-paginator-wrapper {
@@ -365,7 +365,7 @@
 
 .project__card-header-img {
     width: 42rem;
-    height: 36.5rem;
+    height: 34rem;
     border-radius: 10px 10px 0 0;
 }
 
@@ -436,6 +436,7 @@
 
 .project__card:hover .project__card-btn-text {
     color: #283FD9;
+    opacity: 1;
     font-weight: bold;
 }
 

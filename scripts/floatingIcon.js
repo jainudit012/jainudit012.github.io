@@ -30,6 +30,9 @@ try{
             floatingIconObserver.observe(mastHeadSection)
             break;
         }
+        case '/projects.html' : {
+            break;
+        }
         default: {
             mastHeadSection = document.getElementById('site__main')
             floatingIconObserver.observe(mastHeadSection)

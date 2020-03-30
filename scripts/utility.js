@@ -78,7 +78,7 @@ function removeClassFromMultiple(elementsArray, className){
  *  returns { items: Array, valid: Boolean }
  */
 function loadElementsToArray(idPattern, itemsWrapper){
-    const array = [].slice.call(itemsWrapper.children).filter(el=> el.id.indexOf(idPattern) > -1).sort()
+    const array = [].slice.call(itemsWrapper.children).filter(el=> el.id.indexOf(idPattern) > -1).sort((a, b) => a - b)
     return { items: array, valid: array.length != 0 }
 }
 

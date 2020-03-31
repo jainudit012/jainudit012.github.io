@@ -30,6 +30,11 @@ try{
             floatingIconObserver.observe(mastHeadSection)
             break;
         }
+        case '/industry.html' : {
+            mastHeadSection = document.getElementById('industry__main')
+            floatingIconObserver.observe(mastHeadSection)
+            break;
+        }
         case '/projects.html' : {
             break;
         }

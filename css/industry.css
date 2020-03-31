@@ -1,0 +1,54 @@
+.industry__main {
+    padding: 21.4rem 83.3rem 27.6rem 22.6rem;
+    background: linear-gradient(147deg, #09070a 39%, rgba(9, 7, 10, 0.25) 72%), -webkit-image-set( url("../assets/industry_bg.jpg") 1x, url("../assets/industry_bg@2x.jpg") 2x);
+    background-image: linear-gradient(147deg, #09070a 39%, rgba(9, 7, 10, 0.25) 72%) , url("../assets/industry_bg.jpg");
+    color: #fff;
+}
+
+.industry__main--heading {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.industry__main--text {
+    font-family: Lato, sans-serif;
+    font-size: 2.5rem;
+    opacity: 0.7;
+    width: 85%;
+    margin-bottom: 2.1rem;
+}
+
+.industry__overview {
+    padding: 25.1rem 22.6rem 16rem 22.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #151515
+}
+
+.industry__overview__text-wrapper, .industry__overview-img {
+    width: 45%;
+}
+
+.industry__overview__text-heading {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 4.3rem;
+}
+
+.industry__overview__text-info {
+    font-family: Lato, sans-serif;
+    font-size: 2rem;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+}
+
+.industry__card__wrapper {
+    color: #151515;
+    padding: 6.2rem 22.6rem 18.2rem 22.6rem;
+}
+
+.industry__card--heading {
+    font-size: 5rem;
+    font-weight: bold;
+}

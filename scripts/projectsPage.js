@@ -61,9 +61,7 @@ try{
 
     if(projectCardData.valid){
         projectCardData.items.forEach(card => {
-            if(card.children[0] && card.children[0].nodeName.toLowerCase() === 'img') {
-                card.children[0].style.width = `${(totalVisibleWidth / 3) - ((2/3)*gridColumnGap)}px` //  this will change on adding media query
-            }
+            card.style.width = `${(totalVisibleWidth / 3) - ((2/3)*gridColumnGap)}px` //  this will change on adding media query
         })
         const classConfig = {
             frontClass: 'project__card--front',

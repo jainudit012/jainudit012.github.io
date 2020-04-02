@@ -12,7 +12,6 @@
 }
 
 .nav__logo__link {
-    width: 15%;
     margin-right: auto;
     cursor: pointer;
 }
@@ -479,15 +478,15 @@
 }
 
 #rp__panels-1{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.85)), url("../assets/phone.jpg");
-    background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.85)), -webkit-image-set(url("../assets/phone.jpg") 1x, url("../assets/phone@2x.jpg") 2x, url("../assets/phone@3x.jpg") 3x);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.85)), url("https://res.cloudinary.com/opscale/image/upload/q_auto/v1585720627/phone_xr4p6l.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.85)), -webkit-image-set(url("https://res.cloudinary.com/opscale/image/upload/q_auto/v1585720627/phone_xr4p6l.jpg") 1x, url("https://res.cloudinary.com/opscale/image/upload/q_auto/v1585720628/phone_2x_gydyuo.jpg") 2x, url("https://res.cloudinary.com/opscale/image/upload/q_auto/v1585720628/phone_3x_nps7kl.jpg") 3x);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #rp__panels-2, #rp__panels-3, #rp__panels-4, #rp__panels-5, #rp__panels-6, #rp__panels-7, #rp__panels-8, #rp__panels-9, #rp__panels-10, #rp__panels-11 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.95)), url("../assets/watch.jpg");
-    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.95)), -webkit-image-set(url("../assets/watch.jpg") 1x, url("../assets/watch@2x.jpg") 2x, url("../assets/watch@3x.jpg") 3x);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.95)), url("https://res.cloudinary.com/opscale/image/upload/q_auto/v1585720629/watch_zrqqzh.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.95)), -webkit-image-set(url("https://res.cloudinary.com/opscale/image/upload/q_auto/v1585720629/watch_zrqqzh.jpg") 1x, url("https://res.cloudinary.com/opscale/image/upload/q_auto/v1585720630/watch_2x_liioz0.jpg") 2x, url("https://res.cloudinary.com/opscale/image/upload/q_auto/v1585720629/watch_3x_br9roo.jpg") 3x);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -923,6 +922,7 @@ For displaying pill on nav item HOVER
 }
 
 .ii__card__heading {
+    font-family: Poppins, sans-serif;
     font-size: 2rem;
     font-weight: 500;
     line-height: 1.35;

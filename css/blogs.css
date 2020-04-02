@@ -210,10 +210,10 @@ div.blog__content::after {
 .blog__img__box {
     width: 100%;
     height: 45rem;
+    text-align: center;
 }
 
 .blog__img {
-    width: 100%;
     height: 100%;
     border-radius: 3.5rem;
 }

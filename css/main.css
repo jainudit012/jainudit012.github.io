@@ -1453,12 +1453,13 @@ For displaying pill on nav item HOVER
 
 .footer__copyright {
     background-color: #131415;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 9rem 0;
+    padding: 0 14rem 9rem 14rem;
     text-align: center;
 }
 
 .footer__copyright__text {
   font-size: 1.4rem;
+  padding-top: 9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.4);
 }

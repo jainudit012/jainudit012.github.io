@@ -64,7 +64,7 @@ let observerCallback = (entries, observer) => {
     });
 };
 
-let observerTarget = document.getElementById('contact');
+let observerTarget = document.getElementById('footer');
 let observer
 
 try{

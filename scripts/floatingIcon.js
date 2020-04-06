@@ -1,5 +1,5 @@
 const floatingPlusIcon = document.getElementById('floating__icon')
-const footerNode = document.getElementById('contact')
+const footerNode = document.getElementById('footer')
 
 let mastHeadSection
 

@@ -959,34 +959,25 @@ For displaying pill on nav item HOVER
 
 .ii__card--selected .ii__card__btn-text {
     color: #283fd9;
-    font-weight: 600;
 }
-
 
 /* For changing card button color on HOVER */
 .ii__card:hover .ii__card__btn-text {
     color: #283fd9;
-    font-weight: 600;
 }
 
 .ii__card__btn-svg {
-    fill: #283fd9;
-    display: inline;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 200ms ease-in;
+    fill: rgba(21, 21, 21, 0.7);
+    transition: fill 200ms ease-in;
 }
 
 .ii__card--selected .ii__card__btn-svg {
-    opacity: 1;
-    visibility: visible;
+    fill: #283fd9;
 }
 
-
-/* For displaying arrow in card footer on HOVER */
+/* For changing color of arrow in card footer on HOVER */
 .ii__card:hover .ii__card__btn-svg {
-    opacity: 1;
-    visibility: visible;
+    fill: #283fd9;
 }
 
 .ii__card__no-blogs {

@@ -1426,9 +1426,15 @@ For displaying pill on nav item HOVER
     color: rgba(255, 255, 255, 0.6);
 }
 
-.footer__site-sections__links:hover, .sections__links__highlighted {
+.footer__site-sections__links:hover {
     color: rgba(255, 255, 255, 0.8);
 }
+
+.sections__links__highlighted, .sections__links__highlighted:hover {
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+}
+
 .footer__site-sections__container-social {
     width: fit-content;
 }

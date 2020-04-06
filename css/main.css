@@ -1451,6 +1451,14 @@ For displaying pill on nav item HOVER
     fill: rgba(255,255,255,0.6);
 }
 
+.contact__footer--box:hover {
+    border: 1px solid rgba(255,255,255,0.8);
+}
+
+.contact__footer--box:hover .contact__footer--icon {
+    fill: rgba(255,255,255,0.8);
+}
+
 .footer__copyright {
     background-color: #131415;
     padding: 0 14rem 9rem 14rem;

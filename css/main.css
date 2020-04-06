@@ -967,7 +967,7 @@ For displaying pill on nav item HOVER
 }
 
 .ii__card__btn-svg {
-    fill: rgba(21, 21, 21, 0.7);
+    fill : rgba(21, 21, 21, 0.7);
     transition: fill 200ms ease-in;
 }
 
@@ -1062,7 +1062,7 @@ For displaying pill on nav item HOVER
 }
 
 .site__info-mot {
-    padding: 18.2rem  0 18.2rem 22.6rem;
+    padding: 18.2rem  0 12.2rem 22.6rem;
     display: flex;
     width: 100%;
 }
@@ -1265,7 +1265,7 @@ For displaying pill on nav item HOVER
 .site__info-tod {
     display: flex;
     flex-direction: column;
-    padding: 0 22.6rem 23.1rem 22.6rem;
+    padding: 6rem 22.6rem 23.1rem 22.6rem;
     position: relative;
 }
 
@@ -1445,6 +1445,7 @@ For displaying pill on nav item HOVER
     border-radius: 5px;
     padding: 1rem 1.2rem 0.5rem 1.2rem;
     margin-left: auto;
+    cursor: pointer;
 }
 
 .contact__footer--icon {

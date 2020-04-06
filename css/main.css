@@ -725,7 +725,8 @@
 }
 
 .ss__info__quotes {
-    transform: rotateZ(180deg) translate(-2%, -5%);
+    height: 100%;
+    transform: rotateZ(180deg) translateY(-5%);
 }
 
 .ss__info__img {

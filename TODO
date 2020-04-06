@@ -1,4 +1,3 @@
 When Adding JS :
-    - make selected items to have id for easy selection 
-    - make classes using a selected specific class for the selected container
-    - target nested elements in th selected container to have specific styles
+    - add vue
+    - add responsive css

@@ -760,7 +760,6 @@
 
 .ss__panels-paginator-wrapper {
     display: flex;
-    margin-left: 3px;
     height: 5rem;
     grid-column: 2/4;
     grid-row: 2/3;
@@ -1488,7 +1487,6 @@ For displaying pill on nav item HOVER
 @media (max-width:1850px) {
     .site__info-rp__fixed {
         padding: 12rem 15rem;
-        grid-template-rows: 1fr 2fr 5fr 10rem;
     }
 
     .ss__panels__header {

@@ -18,6 +18,8 @@
 
 .nav__logo {
     width: 100%;
+    max-width: 300px;
+    max-height: 100px;
 }
 
 .nav__list__wrapper {
@@ -84,7 +86,8 @@
 
 .site__main {
     display: grid;
-    grid-template-columns: 12fr 35px 1fr;
+    grid-template-columns: 12fr 35px 22.6rem;
+    grid-template-rows: 1fr 4fr 1fr;
     overflow: hidden;
     margin-bottom: 10rem;
 }
@@ -100,6 +103,7 @@
     padding: 21.4rem 0 27.6rem 22.6rem;
     color: #ffffff;
     width: 100%;
+    height: 100%;
     transition: transform 300ms ease-in, opacity 300ms ease-in;
 }
 
@@ -166,9 +170,9 @@
     display: flex;
     flex-direction: column;
     grid-column: 2/3;
-    grid-row: 1/-1;
+    grid-row: 2/3;
     z-index: 1;
-    transform: translateY(25%);
+    align-self: center;
 }
 
 .paginator__counter {
@@ -247,14 +251,14 @@
 
 .site__info-wwd__card__wrapper {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 5rem;
     margin-top: 13rem;
 }
 
 .card {
-    width: 23%;
+    width: 100%;
     padding: 2.8rem;
     border-radius: 5px;
     box-shadow: 0 2px 12px 0 rgba(21, 21, 21, 0.05);
@@ -345,7 +349,7 @@
 
 .site__info-rp__fixed {
     width: 44%;
-    padding: 15.7rem 22.7rem 25.2rem 22.6rem;
+    padding: 15rem 20rem;
     display: grid;
     grid-template-rows: 1fr 2fr 5fr 5rem;
 }
@@ -416,6 +420,7 @@
 .site__info-rp__fixed__filter-paginator-box {
     display: flex;
     align-items: flex-end;
+    align-self: start;
 }
 
 .site__info-rp__fixed__filter-paginator {
@@ -440,7 +445,7 @@
 .site__info-rp__panels__wrapper {
     width: 56%;
     display: grid;
-    grid-template-columns: 2fr 6rem 6rem 1fr;
+    grid-template-columns: 2.25fr 6rem 6rem 0.85fr;
     grid-template-rows: 85% 5% 10%;
     overflow-x: hidden;
     position: relative;
@@ -453,7 +458,6 @@
     flex-direction: column;
     grid-row: 1/-1;
     grid-column: 1/3;
-    width: 36vw;
     height: 100%;
     transition: all 450ms ease-out;
 }
@@ -601,7 +605,8 @@
 }
 
 .hww__heading {
-    margin: 0 0 12rem 8.6rem;
+    margin-bottom:12rem;
+    padding-left: 8.6rem;
     font-size: 5rem;
     font-weight: bold;
     line-height: 1.52;
@@ -674,7 +679,7 @@
     grid-column: 1/3;
     grid-row: 1/-1;
     background-color: #151515;
-    padding: 0 0 14.8rem 22.6rem;
+    padding: 0 0 10.8rem 22.6rem;
     border-radius: 0 0 20px 0;
     transform: translateX(40%);
     opacity: 0;
@@ -690,8 +695,8 @@
 }
 
 .ss__panels__header {
-    padding-top: 11.9rem;
-    margin: 0 18.7rem 10.6rem 0;
+    padding-top: 8rem;
+    margin-bottom: 4rem;
     display: flex;
 }
 
@@ -705,7 +710,7 @@
 .ss__panels__header__text {
     display: flex;
     flex-direction: column;
-    margin: 2rem 0 0 3.7rem;
+    margin: 2rem 5rem 0 3.7rem;
 }
 
 .ss__panels__header__name {
@@ -722,20 +727,24 @@
 
 .ss__info__heading-box {
     display: flex;
+    margin-top: 4rem;
+    align-items: center;
 }
 
 .ss__info__quotes {
     height: 100%;
-    transform: rotateZ(180deg) translateY(-5%);
+    transform: rotateZ(180deg) translateY(20%);
+    width: 20%;
 }
 
 .ss__info__img {
     border-radius: 50%;
+    max-width: 30rem;
+    max-height: 30rem;
 }
 
 .ss__info__heading {
-    margin-top: 10.85rem;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: bold;
 }
 
@@ -745,7 +754,8 @@
     font-size: 2rem;
     font-weight: 900;
     line-height: 1.35;
-    margin: 4rem 24.3rem 0 0;
+    width: 70%;
+    padding-right: 2rem;
 }
 
 .ss__panels-paginator-wrapper {
@@ -932,7 +942,7 @@ For displaying pill on nav item HOVER
 }
 
 .ii__card__text {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
     line-height: 1.38;
     color: rgba(19, 20, 21, 0.6);
@@ -1072,7 +1082,7 @@ For displaying pill on nav item HOVER
 }
 
 .mot__info__heading {
-    font-size: 50px;
+    font-size: 5rem;
     font-weight: bold;
     color: #151515;
     margin-top: 10.5rem;
@@ -1104,7 +1114,7 @@ For displaying pill on nav item HOVER
 
 .mot__info__sub-heading {
     margin-top: auto;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: bold;
     line-height: 1.53;
     color: rgba(21, 21, 21, 0.4);
@@ -1184,7 +1194,7 @@ For displaying pill on nav item HOVER
 }
 
 .mot__card--user-name {
-    font-size: 25px;
+    font-size: 2.5rem;
     font-weight: 600;
     color: #131415;
     margin-top: 5.3rem;
@@ -1216,8 +1226,7 @@ For displaying pill on nav item HOVER
     font-weight: 500;
     line-height: 1.35;
     color: rgba(19, 20, 21, 0.6);
-    margin: 3.25rem 0 3.6rem 0;
-    width: 90%;
+    padding: 3.25rem 2rem 3.6rem 0;
 }
 
 .mot__cards__footer {
@@ -1351,7 +1360,7 @@ For displaying pill on nav item HOVER
 
 .site__footer-section {
     background-color: #131415;
-    padding: 13.7rem 4rem 13.7rem 14rem;
+    padding: 13.7rem 16rem 13.7rem 14rem;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -1368,6 +1377,8 @@ For displaying pill on nav item HOVER
 
 .footer__company__contacts__img {
     width: 100%;
+    max-width: 300px;
+    max-height: 100px;
 }
 
 .footer__company__contacts__list {
@@ -1401,10 +1412,11 @@ For displaying pill on nav item HOVER
     width: 65%;
     display: flex;
     padding: 3rem 0 3rem 10rem;
+    justify-content: space-evenly;
 }
 
 .footer__site-sections__container {
-    width: 20%;
+    width: 18%;
     display: flex;
     flex-direction: column;
 }
@@ -1471,4 +1483,635 @@ For displaying pill on nav item HOVER
   padding-top: 9rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width:1850px) {
+    .site__info-rp__fixed {
+        padding: 12rem 15rem;
+        grid-template-rows: 1fr 2fr 5fr 10rem;
+    }
+
+    .ss__panels__header {
+        padding-top: 6rem;
+    }
+
+    .site__info-tod {
+        padding: 6rem 20.6rem 23.1rem 20.6rem;
+    }
+}
+
+@media (max-width:1800px) {
+    .mot__left-info {
+        width: 40%;
+    }
+
+    .mot__cards__container {
+        width: 60%;
+    }
+
+    .tod__heading {
+        font-size: 10rem;
+    }
+
+    .footer__site-sections__links__wrapper {
+        width: 70%;
+    }
+}
+
+@media (max-width:1700px) {
+    .sections__heading, .site__info-wwd__heading, .ss__info__text-heading, .ii__heading, .wcu__heading, .mot__info__heading, .tod__sub-heading {
+        font-size: 4rem;
+    }
+
+    .site__info-wwd__text {
+        font-size: 1.8rem;
+    }
+
+    .site__info-wwd__text-extra {
+        font-size: 2.25rem;
+    }
+
+    .site__info-wwd__text-quotes {
+        width: 11.5rem;
+    }
+
+    .card__heading {
+        font-size: 2.25rem;
+    }
+
+    .card__img__box {
+        padding: 1.75rem;
+    }
+
+    .site__info-rp__fixed {
+        width: 40%;
+    }
+
+    .site__info-rp__panels__wrapper {
+        width: 60%;
+    }
+
+    .site__info-rp__fixed__heading {
+        font-size: 4rem;
+    }
+
+    .site__info-rp__panels__header__pageNum {
+        font-size: 7rem;
+    }
+
+    .site__info-rp__panels__description {
+        margin: 40.6rem 10.8rem 16.4rem 10rem;
+    }
+
+    .site__info-hww {
+        padding: 12rem;
+    }
+
+    .hww__heading {
+        font-size: 4.5rem;
+    }
+
+    .ss__flipper-panel {
+        padding: 0 0 10.8rem 18.6rem
+    }
+
+    .ss__info__text {
+        padding: 16.45rem 18.6rem 0 7.1rem;
+    }
+
+    .site__info-ii {
+        padding: 14.2rem 18.6rem;
+    }
+
+    .ii__nav {
+        margin-bottom: 10.5rem;
+    }
+
+    .wcu__heading {
+        margin-bottom: 12.6rem;
+    }
+
+    .wcu__card {
+        padding: 8.5rem 6.2rem;
+    }
+
+    .site__info-mot {
+        padding: 12.2rem 0 6.2rem 16.6rem;
+    }
+
+    .footer__site-sections__links__wrapper {
+        padding: 2rem 0 2rem 8rem;
+    }
+
+    .site__footer-section {
+        padding: 11.7rem 12rem 10.7rem 10rem;
+    }
+
+}
+
+@media (max-width:1600px) {
+    .hww__heading {
+        margin-bottom: 8rem;
+    }
+
+    .hww__card {
+        padding: 5rem;
+    }
+
+    .ss__flipper-panel {
+        padding: 0 0 10.8rem 14.6rem
+    }
+
+    .ss__info__text {
+        padding: 16.45rem 14.6rem 0 7.1rem;
+    }
+
+    .mot__left-info {
+        width: 35%;
+    }
+
+    .mot__cards__container {
+        width: 65%;
+    }
+
+    .site__info-tod {
+        padding: 6rem 18.6rem 20.1rem 18.6rem;
+    }
+
+    .tod__heading {
+        font-size: 9rem;
+    }
+}
+
+@media (max-width:1500px) {
+    .site__main {
+        grid-template-columns: 12fr 35px 17.6rem;
+    }
+
+    .site__sections {
+        padding: 16.4rem 0 25.6rem 17.6rem;
+    }
+
+    .nav__list__item {
+        font-size: 1.8rem;
+    }
+
+    .nav__list__link {
+        padding: 2.5rem 1.75rem;;
+    }
+
+    .nav__list__item__group__item .nav__list__link {
+        padding: 2.5rem;
+    }
+
+    .nav__list__item__group__item {
+        font-size: 1.5rem;
+    }
+
+    .site__info-wwd {
+        padding: 6.2rem 18.6rem;
+    }
+
+    .site__info-wwd__card__wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .site__info-rp__fixed {
+        padding: 10rem 12rem;
+    }
+
+    .site__info-rp__panels__description {
+        margin: 36.6rem 10.8rem 12.4rem 10rem;
+    }
+
+    .site__info-hww {
+        padding: 10rem;
+    }
+
+    .ss__flipper-panel {
+        padding: 0 0 8.8rem 10.6rem;
+    }
+
+    .ss__info__text {
+        padding: 12.45rem 10.6rem 0 7.1rem;
+    }
+
+    .ss__info__img {
+        max-width: 25rem;
+        max-height: 25rem;
+    }
+
+    .ss__info__heading {
+        font-size: 2.5rem;
+    }
+
+    .ii__card__wrapper {
+        grid-column-gap: 8.2rem;
+    }
+
+    .site__info-wcu {
+        padding: 10rem 10rem 16rem 10rem;
+    }
+
+    .wcu__heading {
+        margin-bottom: 9.6rem;
+    }
+
+    .wcu__card {
+        padding: 7rem 5rem;
+    }
+
+    .site__info-mot {
+        padding: 12.2rem 0 6.2rem 14.6rem;
+    }
+
+    .tod__heading {
+        font-size: 9rem;
+    }
+
+    .site__info-tod {
+        padding: 6rem 16.6rem 16.1rem 16.6rem;
+    }
+
+    .tod__form__btn {
+        padding: 2.2rem 7.5rem;
+    }
+
+    .site__footer-section {
+        padding: 9.7rem 10rem 8.7rem 8rem;
+    }
+
+    .footer__site-sections__links__wrapper {
+        padding: 1rem 0 1rem 4rem;
+    }
+}
+
+@media (max-width:1400px) {
+    .hww__card__img {
+        width: 9.2rem;
+        height: 9.2rem;
+    }
+
+    .hww__card__text {
+        font-size: 1.8rem;
+    }
+
+    .hww__card__info {
+        margin-top: 4.3rem;
+    }
+
+    .site__info-ii {
+        padding: 12.2rem 14rem;
+    }
+
+    .ii__nav {
+        margin-bottom: 8.5rem;
+    }
+
+    .wcu__card {
+        padding: 6rem 4rem;
+    }
+
+    .site__info-mot {
+        padding: 9.2rem 0 2.2rem 10.6rem;
+    }
+
+    .mot__cards__image {
+        max-width: 45rem;
+    }
+
+    .tod__heading {
+        font-size: 8rem;
+    }
+
+    .site__info-tod {
+        padding: 6rem 15.6rem 16.1rem 15.6rem;
+    }
+}
+
+@media (max-width:1300px) {
+    .site__header {
+        padding: 7.24rem 12rem 0 12rem;
+    }
+
+    .site__main {
+        grid-template-columns: 12fr 35px 13.6rem;
+    }
+
+    .site__sections {
+        padding: 12.4rem 0 16.4rem 13.6rem;
+    }
+
+    .nav__list__link {
+        padding: 2rem 1.25rem;;
+    }
+
+    .nav__list__item__group__item .nav__list__link {
+        padding: 2rem;
+    }
+
+    .site__info-wwd {
+        padding: 4.2rem 14.6rem;
+    }
+
+    .site__info-wwd__text-quotes {
+        width: 10rem;
+    }
+
+    .site__info-rp__fixed {
+        padding: 7.5rem 9rem;
+    }
+
+    .site__info-rp__panels__description {
+        margin: 34.6rem 10.8rem 10.4rem 10rem;
+    }
+
+    .site__info-rp__panels__header__pageNum {
+        font-size: 5.5rem;
+    }
+
+    .site__info-rp__panels__header__name {
+        font-size: 2.5rem;
+    }
+
+    .site__info-rp__panels__header__industry {
+        font-size: 1.8rem;
+    }
+
+    .site__info-rp__panels__description-heading {
+        font-size: 2.5rem;
+    }
+
+    .site__info-rp__panels__description-text {
+        font-size: 1.8rem;
+    }
+
+    .site__info-rp__panels__description-btn {
+        padding: 1.25rem 3rem;
+    }
+
+    .site__info-hww {
+        padding: 8rem;
+    }
+
+    .hww__heading {
+        margin-bottom: 6rem;
+        font-size: 3.5rem;
+    }
+
+    .hww__card {
+        padding: 3.5rem;
+    }
+
+    .wcu__heading {
+        margin-bottom: 7.6rem;
+    }
+
+    .site__info-wcu {
+        padding: 8rem 8rem 14rem 8rem;
+    }
+
+    .wcu__card__svg {
+        transform: scale(0.85);
+    }
+
+    .mot__cards__image {
+        max-width: 43.5rem;
+    }
+
+    .mot__cards__footer {
+        margin-bottom: 0;
+    }
+
+    .mot__cards__footer--link {
+        margin-right: 3rem;
+    }
+
+    .mot__cards__footer--icon {
+        transform: scale(0.9);
+    }
+
+    .mot__card--user-info {
+        padding: 2.25rem 1rem 2.6rem 0;
+    }
+
+    .footer__copyright {
+        padding: 0 12rem 7rem 12rem;
+    }
+
+    .contact__footer--icon {
+        transform: scale(0.85);
+    }
+
+}
+
+@media (max-width:1200px) {
+    .sections__heading , .site__info-rp__fixed__heading, .ss__info__text-heading, .ii__heading, .wcu__heading, .tod__sub-heading {
+        font-size: 3.5rem;
+    }
+
+    .sections__text {
+        font-size: 1.8rem;
+    }
+
+    .sections__sub-heading {
+        font-size: 1.5rem;
+    }
+
+    .nav__list__wrapper {
+        width: 65%;
+    }
+
+    .site__info-rp__fixed__text {
+        font-size: 1.6rem;
+    }
+
+    .site__info-rp__panels__wrapper {
+        grid-template-columns: 2.25fr 6rem 6rem 0.65fr;
+    }
+
+    .site__info-hww {
+        padding: 6rem 7rem;
+    }
+
+    .hww__card__img {
+        width: 8.2rem;
+        height: 8.2rem;
+    }
+
+    .hww__card__info {
+        font-size: 2rem;
+    }
+
+    .hww__card__text {
+        font-size: 1.7rem;
+    }
+
+    .ss__panels__header__pageNum {
+        font-size: 8rem;
+    }
+
+    .ss__panels__header__name {
+        font-size: 2.5rem;
+    }
+
+    .ss__info__img {
+        max-width: 22rem;
+        max-height: 22rem;
+    }
+
+    .ss__info__quotes{
+        width: 15%;
+    }
+
+    .ss__info__heading {
+        font-size: 2rem;
+    }
+
+    .ss__info__panels-text {
+        font-size: 1.8rem;
+    }
+
+    .ii__card__heading {
+        font-size: 1.8rem;
+    }
+
+    .wcu__card {
+        padding: 5rem 3rem;
+    }
+
+    .wcu__card__svg {
+        transform: scale(0.75);
+    }
+
+    .wcu__card__heading {
+        font-size: 2rem;
+    }
+
+    .wcu__card__text {
+        font-size: 1.8rem;
+    }
+
+    .mot__left-info {
+        width: 33%;
+    }
+
+    .mot__cards__container {
+        width: 67%;
+    }
+
+    .mot__info__heading {
+        font-size: 3.5rem;
+        margin-top: 8.5rem;
+    }
+
+    .mot__cards__image {
+        max-width: 41.5rem;
+    }
+
+    .site__info-mot {
+        padding: 7.2rem 0 2.2rem 8.6rem;
+    }
+
+    .mot__info__text, .mot__card--user-info {
+        font-size: 1.8rem;
+    }
+
+    .mot__info__sub-heading {
+        font-size: 2.5rem;
+    }
+
+    .tod__heading {
+        font-size: 7rem;
+    }
+
+    .site__info-tod {
+        padding: 6rem 10.6rem 12.1rem 10.6rem;
+    }
+
+    .tod__text {
+        font-size: 2rem;
+    }
+
+    .tod__form {
+        margin-top: 4.7rem;
+    }
+}
+
+@media (max-width:1100px) {
+    .site__header {
+        padding: 6.24rem 10rem 0 10rem;
+    }
+
+    .site__main {
+        grid-template-columns: 12fr 35px 11.6rem;
+    }
+
+    .site__sections {
+        padding: 10.4rem 0 27.6rem 11.6rem;
+    }
+
+    .nav__list__link {
+        padding: 1.8rem 1rem;;
+    }
+
+    .nav__list__item__group__item .nav__list__link {
+        padding: 1.75rem;
+    }
+
+    .site__info-wwd {
+        padding: 4.2rem 12.6rem;
+    }
+
+    .site__info-wwd__text-quotes {
+        width: 9rem;
+    }
+
+    .card {
+        padding: 2rem;
+    }
+
+    .card__img__box {
+        padding: 1.25rem;
+    }
+
+    .hww__card {
+        padding: 2.75rem;
+    }
+
+    .site__info-ii {
+        padding: 10.2rem 10rem;
+    }
+
+    .ii__nav {
+        margin-bottom: 6.5rem;
+    }
+
+    .wcu__card__svg {
+        transform: scale(0.7);
+    }
+
+    .wcu__card {
+        padding: 4rem 2.5rem;
+    }
+
+    .mot__cards__container {
+        width: 70%;
+    }
+
+    .mot__left-info {
+        width: 30%;
+    }
+
+    .mot__cards__image {
+        max-width: 40.5rem;
+    }
+
+    .site__info-tod {
+        padding: 6rem 10.6rem 10.1rem 10.6rem;
+    }
+
+    .footer__copyright {
+        padding: 0 10rem 6rem 10rem;
+    }
 }

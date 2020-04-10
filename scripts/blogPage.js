@@ -25,6 +25,7 @@ try{
         if(blogQuery['tab']) {
             loadBlog(blogQuery)
         }else {
+            removeClass(blogArticlesWrapper, 'block')
             addClass(blogArticlesWrapper, 'hidden')
             if(blogQuery['type']){
                 filterBlogs(blogQuery['type'], allBlogData.items, 'filtertag')

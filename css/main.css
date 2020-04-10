@@ -1672,6 +1672,7 @@ For displaying pill on nav item HOVER
 
     .site__info-wwd__card__wrapper {
         grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 10rem;
     }
 
     .site__info-rp__fixed {
@@ -1886,7 +1887,7 @@ For displaying pill on nav item HOVER
     }
 
     .mot__cards__footer--icon {
-        transform: scale(0.9);
+        transform: scale(0.85);
     }
 
     .mot__card--user-info {

@@ -1,5 +1,5 @@
 .industry__main {
-    padding: 21.4rem 83.3rem 27.6rem 22.6rem;
+    padding: 21.4rem 0 22.3rem 22.6rem;
     background: linear-gradient(147deg, #09070a 39%, rgba(9, 7, 10, 0.25) 72%), -webkit-image-set( url("../assets/industry_bg.jpg") 1x, url("../assets/industry_bg@2x.jpg") 2x);
     background-image: linear-gradient(147deg, #09070a 39%, rgba(9, 7, 10, 0.25) 72%) , url("../assets/industry_bg.jpg");
     color: #fff;
@@ -7,6 +7,7 @@
 
 .industry__main--heading {
     font-size: 5rem;
+    margin-bottom: 5rem;
     font-weight: bold;
 }
 
@@ -14,7 +15,7 @@
     font-family: Lato, sans-serif;
     font-size: 2.5rem;
     opacity: 0.7;
-    width: 85%;
+    width: 45%;
     margin-bottom: 2.1rem;
 }
 
@@ -51,4 +52,98 @@
 .industry__card--heading {
     font-size: 5rem;
     font-weight: bold;
+}
+
+@media (max-width:1700px){
+    .industry__main {
+        padding: 17.4rem 0 20.3rem 20.6rem;
+    }
+
+    .industry__overview__text-heading, .industry__card--heading {
+        font-size: 4rem;
+    }
+
+    .industry__main--heading {
+        margin-bottom: 4rem;
+        font-size: 4rem;
+    }
+
+    .industry__main--text{
+        font-size: 2.25rem;
+    }
+
+    .industry__overview {
+        padding: 17.1rem 20.6rem 12rem 20.6rem
+    }
+
+    .industry__card__wrapper {
+        padding: 4.2rem 20.6rem 14.2rem 20.6rem;
+    }
+}
+
+@media (max-width:1500px){
+    .industry__main {
+        padding: 17.4rem 0 18.3rem 18.6rem;
+    }
+
+    .industry__overview__text-wrapper {
+        width: 50%;
+    }
+
+    .industry__overview-img {
+        width: 47%;
+    }
+
+    .industry__overview {
+        padding: 17.1rem 18.6rem 12rem 18.6rem
+    }
+
+    .industry__card__wrapper {
+        padding: 4.2rem 18.6rem 14.2rem 18.6rem;
+    }
+}
+
+@media (max-width:1300px) {
+    .industry__main {
+        padding: 17.4rem 0 14.3rem 14.6rem;
+    }
+    .industry__overview__text-heading, .industry__card--heading {
+        font-size: 3.5rem;
+    }
+
+    .industry__main--heading {
+        margin-bottom: 3.5rem;
+        font-size: 3.5rem;
+    }
+
+    .industry__main--text {
+        font-size: 2rem;
+        width: 50%;
+    }
+
+    .industry__overview {
+        padding: 15.1rem 14.6rem 10rem 14.6rem
+    }
+
+    .industry__overview__text-info {
+        font-size: 1.8rem;
+    }
+
+    .industry__card__wrapper {
+        padding: 4.2rem 14.6rem 10.2rem 14.6rem;
+    }
+}
+
+@media (max-width:1100px) {
+    .industry__main {
+        padding: 13.4rem 0 12.6rem 12.6rem;
+    }
+
+    .industry__overview {
+        padding: 11.1rem 12.6rem 8rem 12.6rem
+    }
+
+    .industry__card__wrapper {
+        padding: 2.2rem 12.6rem 8.2rem 12.6rem;
+    }
 }

@@ -5,6 +5,11 @@ html {
     scroll-behavior: smooth;
 }
 
+::selection {
+    color: #283fd9;
+    background-color:  rgb(238, 242, 243)
+}
+
 .hidden {
     display: none !important;
 }

@@ -4,14 +4,24 @@ const projectStoriesArray = []
 
 const projectCardSection = document.getElementById('project__cards__wrapper')
 
-let gridColumnGap = 120 // will have to make it responsive
+let gridColumnGap = 120
+
+function setCarouselGridValues(cards, wrapperWidth){
+    if(window.innerWidth <= 1400 || window.outerWidth <= 1400){
+        gridColumnGap = Math.floor(window.innerWidth / 20)
+    }else gridColumnGap = 120
+
+    projectCardSection.style.gridColumnGap = `${gridColumnGap}px`
+
+    cards.forEach(card => {
+        card.style.width = `${(wrapperWidth / 3) - ((2/3)*gridColumnGap)}px` //  this will change on adding media query
+    })
+}
 
 try{
     const projectDetailData = loadElementsToArray('project-', projectSectionWrapper)
 
     const projectCardData = loadElementsToArray('project__card-', projectCardSection)
-
-    projectCardSection.style.gridColumnGap = `${gridColumnGap}px`
 
     function loadQueriedProjectDetail(){
         const projectQuery = loadFromQuery()
@@ -60,9 +70,8 @@ try{
     let totalVisibleWidth = projectCardSection.clientWidth
 
     if(projectCardData.valid){
-        projectCardData.items.forEach(card => {
-            card.style.width = `${(totalVisibleWidth / 3) - ((2/3)*gridColumnGap)}px` //  this will change on adding media query
-        })
+        setCarouselGridValues(projectCardData.items, totalVisibleWidth)
+
         const classConfig = {
             frontClass: 'project__card--front',
             disabledPaginationClass: 'projects-disabled-paginator',
@@ -73,6 +82,12 @@ try{
 
         carousel(3, classConfig, projectCardData.items)
     }
+    
+    window.addEventListener('resize', ()=>{
+        if(projectCardData.valid){
+            setCarouselGridValues(projectCardData.items, projectCardSection.clientWidth)
+        }
+    })
 
     window.addEventListener('hashchange', loadProjectsFromHashChange)
 }catch(ex){

@@ -52,10 +52,17 @@
 }
 
 .project__background-wrapper {
-    padding: 13.5rem 22.6rem;
+    padding: 13.5rem 0;
     display: flex;
     width: 100%;
     align-items: center;
+    width: 75%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.project__background-text-box {
+    width: 40%;
 }
 
 .project__background-heading {
@@ -73,12 +80,14 @@
 }
 
 .project__background-img-box {
-    margin-left: 20.2rem;
+    width: 50%;
+    text-align: end;
 }
 
 .project__background-img {
-    width: 55rem;
-    height: 55rem;
+    width: 100%;
+    max-width: 55rem;
+    max-height: 55rem;
 }
 
 .project__challenges-wrapper {
@@ -86,7 +95,9 @@
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 6.5rem 22.6rem;
+    padding: 6.5rem 0;
+    width: 75%;
+    margin: 0 auto;
 }
 
 .project__challenges-heading {
@@ -118,7 +129,9 @@
 }
 
 .project__approach-wrapper {
-    padding: 20rem 22.6rem 13.7rem 22.6rem;
+    width: 75%;
+    margin: 0 auto;
+    padding: 20rem 0 13.7rem 0;
 }
 
 .project__approach-heading {
@@ -129,7 +142,7 @@
 .project__approach__cards-box {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 25rem;
+    grid-column-gap: 20%;
 }
 
 .project__approach__info__card {
@@ -156,11 +169,11 @@
 }
 
 .project__solution-wrapper {
-    padding: 0 22.6rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 75%;
+    margin: 0 auto;
 }
 
 .project__solution-info {
@@ -190,7 +203,11 @@
 }
 
 .project__technology-wrapper {
-    padding: 4.7rem 22.6rem;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 4rem;
 }
 
 .project__technology-heading {
@@ -254,11 +271,13 @@
 }
 
 .project__technology__stories-info-wrapper {
-    padding: 15rem 25rem;
+    padding: 15rem 0;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     overflow: hidden;
+    width: 75%;
+    margin: 0 auto;
 }
 
 .project__technology__stories-info {
@@ -283,7 +302,7 @@
 .project__technology__stories-author {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 35%;
     padding-left: 5rem;
 }
 
@@ -332,8 +351,9 @@
 }
 
 .project__explore {
-    padding: 7.6rem 41rem;
-    color: #151515
+    color: #151515;
+    width: 75%;
+    margin: 7.6rem auto;
 }
 
 .project__explore-heading {
@@ -363,7 +383,9 @@
 
 .project__cards__section {
     display: grid;
-    padding: 0 15.5rem 20rem 22.6rem;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 20rem;
     grid-template-columns: 1fr 6rem 6rem;
     grid-template-rows: 29rem 5rem 1fr;
 }
@@ -482,4 +504,186 @@
 .project__card:hover {
     padding-bottom: 2.5rem;
     border-bottom: 0.5rem solid #283FD9;
+}
+
+@media (max-width:1700px){
+    .project__background-heading, .project__challenges-heading, .project__solution-heading {
+        font-size: 4rem;
+        margin-bottom: 3.3rem;
+    }
+
+    .project__approach-heading {
+        font-size: 4rem;
+    }
+
+    .project__challenges-list-wrapper {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:1500px){
+    .project__mast__wrapper {
+        padding: 18.7rem 0 20rem 18.6rem;
+    }
+
+    .project__info-detail {
+        font-size: 2.5rem;
+        margin: 5.05rem 0 2.6rem 0;
+    }
+    .project__client-name {
+        font-size: 2.5rem;
+    }
+
+    .project__industry-name {
+        font-size: 2rem
+    }
+
+    .project__background-wrapper {
+        padding: 9.5rem 0;
+        width: 80%;
+    }
+
+    .project__solution-wrapper, .project__technology-wrapper, .project__technology__stories-info-wrapper, .project__cards__section, .project__challenges-wrapper { 
+        width: 80%;
+    }
+
+    .project__explore {
+        width: 80%;
+        margin: 4.6rem auto;
+    }
+
+    .author__quote_img {
+        transform: scale(0.8) rotateZ(180deg) translateY(50%);
+    }
+
+    .project__technology__stories-text-heading {
+        font-size: 2.5rem;
+    }
+
+    .project__technology__stories-info-wrapper {
+        padding: 10rem 0;
+    }
+
+    .project__cards__section {
+        margin-bottom: 15rem;
+    }
+
+    .project__approach__info__card--header {
+        padding: 2rem;
+    }
+
+    .project__approach__info__card--header-img {
+        transform: scale(0.8)
+    }
+
+    .project__approach-wrapper {
+        width: 80%;
+        padding: 16rem 0 9.7rem 0;
+    }
+}
+
+@media (max-width:1300px){
+    .project__mast__wrapper {
+        padding: 14.7rem 0 16rem 14.6rem;
+    }
+
+    .project__background-heading, .project__challenges-heading, .project__solution-heading {
+        font-size: 3.5rem;
+        margin-bottom: 2.3rem;
+    }
+
+    .project__approach-heading {
+        font-size: 3.5rem;
+        margin-bottom: 4.7rem;
+    }
+
+    .project__solution-heading {
+        font-size: 3.5rem;
+    }
+
+    .project__challenges-list-wrapper {
+        font-size: 2rem;
+    }
+
+    .project__background-wrapper {
+        padding: 7.5rem 0;
+    }
+
+    .project__approach__cards-box {
+        grid-column-gap: 15%;
+    }
+
+    .project__technology__stories-text-info, .project__solution-text {
+        font-size: 1.8rem;
+    }
+
+    .project__technology__stories-author-img-box {
+        height: auto;
+    }
+
+    .project__technology__stories-author-img {
+        max-width: 25rem;
+        max-height: 25rem;
+    }
+
+    .project__technology__stories-text-wrapper {
+        width: 60%;
+    }
+
+    .author__quote_img {
+        transform: scale(0.7) rotateZ(180deg) translateY(50%);
+    }
+
+    .project__explore {
+        margin: 3.6rem auto;
+    }
+
+    .project__card-header-img {
+        max-width: 32rem;
+    }
+
+    .project__technology__stories-info-wrapper {
+        padding: 8rem 0;
+    }
+
+    .project__cards__section {
+        margin-bottom: 10rem;
+    }
+
+    .project__approach__info__card--header {
+        padding: 1.5rem;
+    }
+
+    .project__approach__info__card--header-img {
+        transform: scale(0.75)
+    }
+
+    .project__approach-wrapper {
+        padding: 8rem 0 8.7rem 0;
+    }
+}
+
+@media (max-width:1200px){
+    .project__card-header-img {
+        max-width: 30rem;
+    }
+}
+
+@media (max-width:1100px){
+    .project__background-text {
+        font-size: 1.8rem;
+    }
+
+    .project__technology-heading {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .project__card-header-img {
+        max-width: 28rem;
+    }
+
+    .project__approach-wrapper {
+        padding: 4rem 0 5.7rem 0;
+    }
 }

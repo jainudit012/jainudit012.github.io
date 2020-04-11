@@ -18,30 +18,29 @@ function setCarouselGridValues(cards, wrapperWidth){
     })
 }
 
+
+function loadQueriedProjectDetail(projects){
+    const projectQuery = loadFromQuery()
+
+    toggleClassOnDataSelect(projects, 'projectnumber', projectQuery['projNo'], 'block')
+}
+
+function loadProjectsFromHashChange(projects){
+    let projectPageHash = window.location.hash
+    if(projectPageHash.indexOf('more' === 0)){
+        changeHashToQuery('projNo', '1')
+        loadQueriedProjectDetail(projects)
+    }
+}
+
 try{
     const projectDetailData = loadElementsToArray('project-', projectSectionWrapper)
 
     const projectCardData = loadElementsToArray('project__card-', projectCardSection)
 
-    function loadQueriedProjectDetail(){
-        const projectQuery = loadFromQuery()
-
-        if(projectDetailData.valid){
-            toggleClassOnDataSelect(projectDetailData.items, 'projectnumber', projectQuery['projNo'], 'block')
-        }
-    }
-
-    function loadProjectsFromHashChange(){
-        let projectPageHash = window.location.hash
-        if(projectPageHash.indexOf('more' === 0)){
-            changeHashToQuery('projNo', '1')
-            loadQueriedProjectDetail()
-        }
-    }
-    
-    loadQueriedProjectDetail()
-
     if(projectDetailData.valid){
+        loadQueriedProjectDetail(projectDetailData.items)
+
         for(i=0;i<projectDetailData.items.length;i++){
             projectStoriesArray.push(document.getElementById(`stories-project-${i+1}`))
         }
@@ -65,6 +64,8 @@ try{
                 }
             }
         })
+
+        window.addEventListener('hashchange', () => loadProjectsFromHashChange(projectDetailData.items))
     }
 
     let totalVisibleWidth = projectCardSection.clientWidth
@@ -81,15 +82,11 @@ try{
         }
 
         carousel(3, classConfig, projectCardData.items)
-    }
-    
-    window.addEventListener('resize', ()=>{
-        if(projectCardData.valid){
-            setCarouselGridValues(projectCardData.items, projectCardSection.clientWidth)
-        }
-    })
 
-    window.addEventListener('hashchange', loadProjectsFromHashChange)
+        window.addEventListener('resize', ()=>{
+            setCarouselGridValues(projectCardData.items, projectCardSection.clientWidth)
+        })
+    }
 }catch(ex){
     console.log(ex)
 }

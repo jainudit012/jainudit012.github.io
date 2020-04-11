@@ -27,7 +27,7 @@ for(i=0;i<numBlogFilters;i++) {
     blogFilterTabData.push(document.getElementById(`blog__filter-${i+1}`))
 }
 
-function filterBlogs(tag, allBlogs, tagDataSetKeyName){
+function filterBlogs(tag, allBlogs, tagDataSetKeyName, noContentBlog){
     let filteredBlogs = []
     let hiddenBlogs = []
     if (tag === 'all') {
@@ -44,17 +44,15 @@ function filterBlogs(tag, allBlogs, tagDataSetKeyName){
     removeClassFromMultiple(hiddenBlogs, 'block')
 
     if(filteredBlogs.length === 0) {
-        removeClass(noBlogElement, 'hide')
-    }else addClass(noBlogElement, 'hide')
+        removeClass(noContentBlog, 'hide')
+    }else addClass(noContentBlog, 'hide')
 }
-
 
 let observerOptions = {
     root: null,
     rootMargin: '100px',
     threshold: 0.1
 }
-
 
 let observerCallback = (entries, observer) => {
     entries.forEach(entry => {
@@ -86,7 +84,7 @@ try{
                     window.location.href = `/blogs.html?tab=${selectedFilterTab}&selected=${blogCard.id.split('-')[1]}`
                 }else {
                     window.history.replaceState(null, '', `?tab=${selectedFilterTab}&selected=${blogCard.id.split('-')[1]}`)
-                    loadBlogsFromQuery()
+                    if(blogArticleData && blogArticleData.valid) loadBlogsFromQuery(allBlogData.items, noBlogElement, blogArticleData.items)
                 }
             })
         })
@@ -112,7 +110,7 @@ try{
             }
             addClass(filterTab, config.navItemSelectedClass)
             removeClassFromMultiple(blogFilterTabData.filter(tabs=> tabs.id !== filterTab.id), config.navItemSelectedClass)
-            if(allBlogData.valid) filterBlogs(filterTab.dataset.filtertag, allBlogData.items, 'filtertag')
+            if(allBlogData.valid) filterBlogs(filterTab.dataset.filtertag, allBlogData.items, 'filtertag', noBlogElement)
         })
     })
 }catch(ex){

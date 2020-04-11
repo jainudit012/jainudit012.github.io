@@ -22,13 +22,11 @@ function loadBlog(query, blogs, blogArticles){
 
     toggleClassOnDataSelect(blogFilterTabData, 'filtertag', query.tab, 'blogs__nav__item--selected')
 
-    // if(blogArticleData.valid){
     blogArticles.forEach(article => {
         if(article.id.indexOf(query.selected) !== -1){
             removeClass(article, 'hidden')
         }else addClass(article, 'hidden')
     })
-    // }
 }
 
 function loadBlogsFromQuery(blogs, noContentBlog, blogArticles){
@@ -40,10 +38,10 @@ function loadBlogsFromQuery(blogs, noContentBlog, blogArticles){
         removeClass(blogArticlesWrapper, 'block')
         addClass(blogArticlesWrapper, 'hidden')
         if(blogQuery['type']){
-            filterBlogs(blogQuery['type'], allBlogData.items, 'filtertag', noContentBlog)
+            filterBlogs(blogQuery['type'], blogs, 'filtertag', noContentBlog)
             toggleClassOnDataSelect(blogFilterTabData, 'filtertag', blogQuery['type'], 'blogs__nav__item--selected')
         }else {
-            filterBlogs('all', allBlogData.items, 'filtertag', noBlogElement, noContentBlog)
+            filterBlogs('all', blogs, 'filtertag', noBlogElement, noContentBlog)
             toggleClassOnDataSelect(blogFilterTabData, 'filtertag', 'all', 'blogs__nav__item--selected')
         }
     }
@@ -68,7 +66,7 @@ try{
         if(allBlogData.valid){
             loadBlogsFromQuery(allBlogData.items, noBlogElement, blogArticleData.items)
 
-            loadBlogsFromHashChange(allBlogData.items, blogArticleData.items)
+            window.addEventListener('hashchange', () => loadBlogsFromHashChange(allBlogData.items, blogArticleData.items))
         }
     }
 

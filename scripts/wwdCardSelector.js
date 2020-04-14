@@ -1,9 +1,1 @@
-try {
-    const wrapper = document.getElementById('wwd__card__box')
-    const allCardData = loadElementsToArray('wwd__card-', wrapper)
-    if(allCardData.valid){
-        addSelectItemListener(allCardData.items, 'card__selected', false)
-    }
-}catch(err){
-    console.log(err)
-}
+"use strict";try{var wrapper=document.getElementById("wwd__card__box"),allCardData=loadElementsToArray("wwd__card-",wrapper);allCardData.valid&&addSelectItemListener(allCardData.items,"card__selected",!1)}catch(a){console.log(a)}

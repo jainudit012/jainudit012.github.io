@@ -1,1 +1,1 @@
-"use strict";try{var wrapper=document.getElementById("wwd__card__box"),allCardData=loadElementsToArray("wwd__card-",wrapper);allCardData.valid&&addSelectItemListener(allCardData.items,"card__selected",!1)}catch(a){console.log(a)}
+try{const a=document.getElementById("wwd__card__box"),b=loadElementsToArray("wwd__card-",a);b.valid&&addSelectItemListener(b.items,"card__selected",!1)}catch(a){console.log(a)}
